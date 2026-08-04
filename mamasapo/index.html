@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ファスティング×ピラティス 一週間ダイエット企画｜ぬん × 小山ゆか.</title>
+<meta name="description" content="断食はたった1日。毎回2〜3kg減の方が続出しているワンデイファスティングが、ピラティス指導付きでパワーアップ。8月28日〜9月3日開催。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Old+Mincho:wght@400;700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2b2b2b;
+  --rose:#d4706a;
+  --rose-deep:#b05a3a;
+  --rose-pale:#fdf0f0;
+  --rose-light:#f5d5d5;
+  --gold:#c2a35c;
+  --gold-pale:#faf6ec;
+  --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  color:var(--ink);
+  background:#f7f5f2;
+  line-height:1.9;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:640px;margin:0 auto;background:var(--white);overflow:hidden}
+img{max-width:100%;display:block}
+
+/* ===== 汎用 ===== */
+.en-label{
+  font-family:'Montserrat',sans-serif;
+  font-size:11px;
+  letter-spacing:.35em;
+  color:var(--gold);
+  text-transform:uppercase;
+  text-align:center;
+  margin-bottom:10px;
+}
+.sec{padding:64px 24px}
+.sec-title{
+  font-family:'Zen Old Mincho',serif;
+  font-size:26px;
+  font-weight:700;
+  text-align:center;
+  line-height:1.6;
+  margin-bottom:32px;
+}
+.sec-title .accent{color:var(--rose)}
+.nw{white-space:nowrap}
+.mk{background:linear-gradient(transparent 62%,#fbe3a8 62%);font-weight:700}
+.mk-rose{background:linear-gradient(transparent 62%,var(--rose-light) 62%);font-weight:700}
+.txt-rose{color:var(--rose-deep);font-weight:700}
+.hbox{
+  display:inline-block;
+  border:1px solid var(--ink);
+  padding:6px 18px;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+.center{text-align:center}
+
+/* ===== CTA ===== */
+.cta-block{padding:48px 24px;text-align:center;background:var(--rose-pale)}
+.cta-note{font-size:12px;color:#8a8a8a;margin-top:12px}
+.cta-btn{
+  display:block;
+  max-width:420px;
+  margin:0 auto;
+  background:linear-gradient(180deg,#e8938c 0%,var(--rose) 45%,var(--rose-deep) 100%);
+  color:#fff;
+  text-decoration:none;
+  font-size:19px;
+  font-weight:900;
+  letter-spacing:.08em;
+  padding:22px 16px;
+  border-radius:999px;
+  position:relative;
+  overflow:hidden;
+  border-bottom:5px solid #8a4229;
+  box-shadow:0 10px 22px rgba(176,90,58,.45),inset 0 2px 0 rgba(255,255,255,.4);
+  animation:btnpulse 2.4s ease-in-out infinite;
+}
+.cta-btn::before{
+  content:"";
+  position:absolute;top:0;left:-75%;
+  width:50%;height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:skewX(-25deg);
+  animation:btnshine 3.2s infinite;
+}
+.cta-btn::after{
+  content:"▶";
+  position:absolute;right:24px;top:50%;
+  transform:translateY(-50%);
+  font-size:12px;opacity:.9;
+}
+.cta-btn:active{transform:translateY(3px);border-bottom-width:2px}
+.cta-btn small{display:block;font-size:11px;font-weight:400;letter-spacing:.15em;opacity:.85;margin-top:2px}
+@keyframes btnshine{0%{left:-75%}45%{left:125%}100%{left:125%}}
+@keyframes btnpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.cta-head{
+  font-family:'Zen Old Mincho',serif;
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+/* ===== FV ===== */
+.fv{
+  background:
+    radial-gradient(circle at 20% 15%,rgba(212,112,106,.10),transparent 45%),
+    radial-gradient(circle at 85% 80%,rgba(194,163,92,.14),transparent 45%),
+    linear-gradient(180deg,#fffdfa 0%,var(--rose-pale) 100%);
+  padding:56px 24px 48px;
+  text-align:center;
+  position:relative;
+}
+.fv-date{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  letter-spacing:.3em;
+  color:var(--rose-deep);
+  margin-bottom:18px;
+}
+.fv-copy{
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:.1em;
+  margin-bottom:14px;
+}
+.fv-title{
+  font-family:'Zen Old Mincho',serif;
+  font-size:clamp(21px,6.8vw,30px);
+  font-weight:900;
+  line-height:1.5;
+  margin-bottom:6px;
+}
+.fv-title .nowrap{white-space:nowrap}
+.fv-title .x{
+  color:var(--gold);
+  font-size:22px;
+  margin:0 4px;
+}
+.fv-sub{
+  display:inline-block;
+  background:var(--ink);
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.15em;
+  padding:6px 22px;
+  margin:14px 0 34px;
+}
+.fv-photos{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-bottom:12px;
+}
+.fv-photo{
+  width:150px;
+  text-align:center;
+}
+.fv-photo .ph{
+  width:140px;height:140px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:0 auto 10px;
+  border:3px solid #fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  background:var(--rose-light);
+  position:relative;
+}
+.fv-photo .ph::before{
+  content:"PHOTO";
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;letter-spacing:.2em;color:#fff;
+}
+.fv-photo .ph img{
+  position:relative;z-index:1;
+  width:100%;height:100%;object-fit:cover;
+}
+.fv-photo .role{font-size:11px;color:#8a8a8a;letter-spacing:.05em;line-height:1.5}
+.fv-photo .name{font-family:'Zen Old Mincho',serif;font-size:16px;font-weight:700}
+.fv-x{
+  align-self:center;
+  font-family:'Montserrat',sans-serif;
+  font-size:20px;
+  color:var(--gold);
+  font-weight:700;
+}
+.fv-badges{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:26px 0 30px;
+}
+.fv-badge{
+  background:#fff;
+  border:1px solid var(--rose-light);
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--rose-deep);
+  padding:7px 16px;
+  letter-spacing:.05em;
+}
+
+/* ===== 実績 ===== */
+.results{background:#fff}
+.big-number{
+  font-family:'Montserrat',sans-serif;
+  text-align:center;
+  margin:8px 0 6px;
+}
+.big-number .num{
+  font-size:64px;
+  font-weight:700;
+  color:var(--rose);
+  line-height:1;
+}
+.big-number .unit{font-size:22px;font-weight:700;color:var(--rose)}
+.big-number .cap{font-size:13px;color:#8a8a8a;letter-spacing:.1em;font-family:'Noto Sans JP',sans-serif}
+.voice-row{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin:16px 0;
+}
+.v-avatar{
+  width:56px;height:56px;
+  flex-shrink:0;
+  border-radius:50%;
+  border:2px solid var(--rose-light);
+  background:#fff;
+  overflow:hidden;
+}
+.v-avatar img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:50% 15%;
+}
+.voice{
+  background:var(--rose-pale);
+  border-radius:4px 16px 16px 16px;
+  padding:14px 18px;
+  font-size:14px;
+  position:relative;
+  flex:1;
+}
+.voice::before{
+  content:"”";
+  font-family:'Zen Old Mincho',serif;
+  font-size:44px;
+  color:var(--rose-light);
+  position:absolute;
+  top:-4px;right:12px;
+  line-height:1;
+}
+.voice .who{font-size:11px;color:#a08a8a;margin-top:6px;display:block}
+.voice .who::before{content:"口コミ｜";color:var(--rose-deep);font-weight:700}
+.sns-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  max-width:460px;
+  margin:26px auto 0;
+}
+.sns-grid img{
+  width:100%;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.sns-cap{
+  text-align:center;
+  font-size:11px;
+  color:#8a8a8a;
+  margin-top:10px;
+}
+.value-stack{
+  max-width:420px;
+  margin:0 auto 0;
+  border:1px solid #e5ddd0;
+  border-radius:14px;
+  overflow:hidden;
+  text-align:left;
+}
+.vs-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:13px 18px;
+  font-size:13px;
+  background:#fff;
+  border-bottom:1px dashed #e5ddd0;
+}
+.vs-row .vs-price{font-family:'Montserrat',sans-serif;font-weight:600;white-space:nowrap}
+.vs-total{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:13px 18px;
+  font-size:14px;
+  font-weight:700;
+  background:var(--gold-pale);
+}
+.vs-total .strike{
+  font-family:'Montserrat',sans-serif;
+  font-size:20px;
+  font-weight:700;
+  text-decoration:line-through;
+  text-decoration-color:var(--rose);
+  text-decoration-thickness:2px;
+  color:#666;
+}
+.vs-arrow{
+  text-align:center;
+  color:var(--rose);
+  font-size:22px;
+  margin:10px 0;
+}
+
+/* ===== チェックリスト ===== */
+.check-sec{background:var(--gold-pale)}
+.check-list{list-style:none;max-width:440px;margin:0 auto}
+.check-list li{
+  background:#fff;
+  border-radius:12px;
+  padding:14px 18px 14px 46px;
+  margin-bottom:10px;
+  font-size:14px;
+  font-weight:500;
+  position:relative;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.check-list li::before{
+  content:"✓";
+  position:absolute;
+  left:16px;top:50%;
+  transform:translateY(-50%);
+  width:20px;height:20px;
+  background:var(--rose);
+  color:#fff;
+  border-radius:50%;
+  font-size:12px;
+  display:flex;align-items:center;justify-content:center;
+}
+.check-close{
+  text-align:center;
+  margin-top:28px;
+  font-family:'Zen Old Mincho',serif;
+  font-size:18px;
+  font-weight:700;
+}
+.check-close .accent{color:var(--rose)}
+
+/* ===== 相乗効果図 ===== */
+.synergy{background:#fff}
+.circles{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  margin:30px 0;
+  flex-wrap:nowrap;
+}
+.circle{
+  width:150px;height:150px;
+  border:1px solid var(--ink);
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  flex-shrink:1;
+  background:#fff;
+}
+.circle .c-en{
+  font-family:'Montserrat',sans-serif;
+  font-size:9px;
+  letter-spacing:.2em;
+  color:var(--gold);
+  margin-bottom:4px;
+}
+.circle .c-main{font-family:'Zen Old Mincho',serif;font-size:17px;font-weight:700;line-height:1.4}
+.circle .c-sub{font-size:11px;color:#8a8a8a;margin-top:4px;line-height:1.5}
+.circle.result{
+  background:var(--rose);
+  border-color:var(--rose);
+  color:#fff;
+}
+.circle.result .c-main{color:#fff}
+.circle.result .c-sub{color:rgba(255,255,255,.85)}
+.circle.result .c-en{color:rgba(255,255,255,.7)}
+.op{
+  font-family:'Montserrat',sans-serif;
+  font-size:20px;
+  font-weight:700;
+  color:var(--gold);
+  flex-shrink:0;
+}
+.synergy-note{
+  max-width:440px;
+  margin:0 auto;
+  font-size:14px;
+}
+@media (max-width:480px){
+  .circles{gap:0}
+  .circle{width:104px;height:104px;flex-shrink:0}
+  .circle .c-main{font-size:13px}
+  .circle .c-sub{display:none}
+  .circle .c-en{font-size:8px}
+  .op{font-size:15px;width:20px;margin:0 -10px;z-index:2;position:relative;text-align:center}
+}
+
+/* ===== 1週間の流れ ===== */
+.flow-sec{background:var(--rose-pale)}
+.timeline{max-width:460px;margin:0 auto}
+.tl-item{
+  display:flex;
+  gap:16px;
+  position:relative;
+  padding-bottom:26px;
+}
+.tl-item:not(:last-child)::before{
+  content:"";
+  position:absolute;
+  left:21px;top:44px;bottom:0;
+  width:1px;
+  background:var(--rose-light);
+}
+.tl-day{
+  width:44px;height:44px;
+  border-radius:50%;
+  background:#fff;
+  border:1.5px solid var(--rose);
+  color:var(--rose-deep);
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;
+  font-weight:700;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  line-height:1.1;
+  text-align:center;
+}
+.tl-day.main{background:var(--rose);color:#fff;border-color:var(--rose)}
+.tl-body{flex:1;background:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.tl-body h4{font-size:15px;margin-bottom:4px}
+.tl-body p{font-size:13px;color:#666}
+.flow-banner{
+  max-width:460px;
+  margin:26px auto 0;
+  background:linear-gradient(135deg,var(--gold) 0%,#a8873c 100%);
+  color:#fff;
+  border-radius:14px;
+  padding:18px 20px;
+  text-align:center;
+}
+.flow-banner .fb-label{
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;
+  letter-spacing:.25em;
+  opacity:.85;
+  margin-bottom:4px;
+}
+.flow-banner .fb-main{font-size:16px;font-weight:700}
+.flow-banner .fb-sub{font-size:12px;opacity:.9;margin-top:4px}
+
+/* ===== 特典 ===== */
+.benefits{background:#fff}
+.benefit{
+  max-width:460px;
+  margin:0 auto 16px;
+  border:1px solid var(--rose-light);
+  border-radius:14px;
+  overflow:hidden;
+}
+.benefit .b-head{
+  background:var(--rose-pale);
+  padding:10px 18px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.benefit .b-num{
+  font-family:'Montserrat',sans-serif;
+  font-size:11px;
+  letter-spacing:.15em;
+  color:var(--rose-deep);
+  font-weight:700;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.benefit .b-title{font-size:15px;font-weight:700}
+.benefit .b-body{padding:14px 18px;font-size:13px;color:#555}
+
+/* ===== プロフィール ===== */
+.profiles{background:var(--gold-pale)}
+.profile{
+  max-width:460px;
+  margin:0 auto 28px;
+  background:#fff;
+  border-radius:16px;
+  padding:26px 24px;
+  box-shadow:0 4px 14px rgba(0,0,0,.05);
+  text-align:center;
+}
+.profile .p-photo{
+  width:120px;height:120px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:0 auto 14px;
+  background:var(--rose-light);
+  position:relative;
+}
+.profile .p-photo::before{
+  content:"PHOTO";
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Montserrat',sans-serif;
+  font-size:10px;letter-spacing:.2em;color:#fff;
+}
+.profile .p-photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+.profile .p-role{font-size:11px;color:var(--gold);letter-spacing:.2em;margin-bottom:4px}
+.profile .p-name{font-family:'Zen Old Mincho',serif;font-size:20px;font-weight:700;margin-bottom:12px}
+.profile .p-bio{font-size:13px;color:#555;text-align:left}
+
+/* ===== 参加費 ===== */
+.price-sec{background:#fff;text-align:center}
+.price-box{
+  max-width:420px;
+  margin:0 auto;
+  border:2px solid var(--rose);
+  border-radius:16px;
+  padding:30px 24px;
+}
+.price-label{font-size:13px;letter-spacing:.15em;font-weight:700;color:var(--rose-deep);margin-bottom:8px}
+.price-num{
+  font-family:'Montserrat',sans-serif;
+  font-size:44px;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.2;
+}
+.price-num .yen{font-size:20px}
+.price-note{font-size:12px;color:#8a8a8a;margin-top:10px}
+.deadline{
+  display:inline-block;
+  margin-top:18px;
+  background:var(--ink);
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.1em;
+  padding:8px 22px;
+}
+
+/* ===== FAQ ===== */
+.faq-sec{background:var(--rose-pale)}
+.faq{max-width:460px;margin:0 auto}
+.faq details{
+  background:#fff;
+  border-radius:12px;
+  margin-bottom:10px;
+  overflow:hidden;
+}
+.faq summary{
+  list-style:none;
+  cursor:pointer;
+  padding:15px 44px 15px 18px;
+  font-size:14px;
+  font-weight:700;
+  position:relative;
+}
+.faq summary::before{content:"Q. ";color:var(--rose)}
+.faq summary::after{
+  content:"＋";
+  position:absolute;
+  right:16px;top:50%;
+  transform:translateY(-50%);
+  color:var(--rose);
+  font-weight:400;
+}
+.faq details[open] summary::after{content:"−"}
+.faq .a{padding:0 18px 15px;font-size:13px;color:#555}
+.faq .a::before{content:"A. ";color:var(--gold);font-weight:700}
+
+/* ===== フッター ===== */
+.footer{
+  background:var(--ink);
+  color:#999;
+  text-align:center;
+  font-size:11px;
+  padding:26px 20px;
+  letter-spacing:.05em;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ FV ============ -->
+  <section class="fv">
+    <p class="fv-date">2026.8.28 FRI − 9.3 THU</p>
+    <p class="fv-copy">断食は、たった1日。</p>
+    <h1 class="fv-title"><span class="nowrap">ファスティング<span class="x">×</span>ピラティス</span><br><span class="nowrap">一週間ダイエット企画</span></h1>
+    <p class="fv-sub">初コラボ開催</p>
+
+    <div class="fv-photos">
+      <div class="fv-photo">
+        <div class="ph"><img src="../yuka.jpg" alt="小山ゆか." onerror="this.style.display='none'"></div>
+        <p class="role">ピラティス講師</p>
+        <p class="name">小山ゆか.</p>
+      </div>
+      <div class="fv-x">×</div>
+      <div class="fv-photo">
+        <div class="ph"><img src="../nun.jpg" alt="ぬん" onerror="this.style.display='none'"></div>
+        <p class="role">ファスティングコーチ</p>
+        <p class="name">ぬん</p>
+      </div>
+    </div>
+
+    <div class="fv-badges">
+      <span class="fv-badge">断食は1日だけ</span>
+      <span class="fv-badge">断食日は自由に選べる</span>
+      <span class="fv-badge">ピラティス7日間つき</span>
+    </div>
+
+    <a class="cta-btn" href="#" data-square>今すぐ申し込む<small>SQUARE SECURE CHECKOUT</small></a>
+  </section>
+
+  <!-- ============ 実績 ============ -->
+  <section class="sec results">
+    <p class="en-label">Results</p>
+    <h2 class="sec-title">断食はたった<span class="accent">1日</span>なのに<br>毎回、結果が出ています</h2>
+
+    <div class="big-number">
+      <span class="num">−2〜3</span><span class="unit">kg</span>
+      <p class="cap">参加者の多くが1回の開催で達成</p>
+    </div>
+
+    <div class="voice-row">
+      <div class="v-avatar"><img src="../voice1.jpg" alt="参加者イラスト"></div>
+      <div class="voice">
+        終わったあとも<span class="mk-rose">自然と食生活が変わって</span>、気付いたら<strong class="txt-rose">4kg以上</strong>痩せてました！
+        <span class="who">過去のワンデイファスティング参加者さま</span>
+      </div>
+    </div>
+    <div class="voice-row">
+      <div class="v-avatar"><img src="../voice2.jpg" alt="参加者イラスト"></div>
+      <div class="voice">
+        <span class="mk">一人だと絶対に無理だった</span>けど、オープンチャットでみんなと一緒だから最後までできました。
+        <span class="who">過去のワンデイファスティング参加者さま</span>
+      </div>
+    </div>
+
+    <div class="sns-grid">
+      <img src="../r1.jpg" alt="参加者の実績：マイナス2.6kg" loading="lazy">
+      <img src="../r2.jpg" alt="参加者の実績：マイナス2.2kg" loading="lazy">
+      <img src="../r3.jpg" alt="参加者の実績：30代初の40キロ台" loading="lazy">
+      <img src="../r4.jpg" alt="参加者の1週間のビフォーアフター" loading="lazy">
+    </div>
+    <p class="sns-cap">実際のご報告の一部です（掲載許可をいただいています）</p>
+
+    <p class="center" style="font-size:13px;color:#8a8a8a;margin-top:18px">※効果には個人差があります</p>
+  </section>
+
+  <!-- ============ CTA 1 ============ -->
+  <div class="cta-block">
+    <p class="cta-head">次に結果を出すのは、あなたです</p>
+    <a class="cta-btn" href="#" data-square>今すぐ申し込む<small>SQUARE SECURE CHECKOUT</small></a>
+  </div>
+
+  <!-- ============ こんな方へ ============ -->
+  <section class="sec check-sec">
+    <p class="en-label">For You</p>
+    <h2 class="sec-title">こんな方に<br>参加してほしい企画です</h2>
+    <ul class="check-list">
+      <li>夏に向けて、今度こそ結果を出したい</li>
+      <li>自己流のダイエットが続いたことがない</li>
+      <li>ファスティングに興味はあるけど、一人では不安</li>
+      <li>運動が苦手でも、できることから始めたい</li>
+      <li>リバウンドしない食生活を身につけたい</li>
+    </ul>
+    <p class="check-close">ひとつでも当てはまったら、<br><span class="accent">この1週間で変われます。</span></p>
+  </section>
+
+  <!-- ============ 相乗効果 ============ -->
+  <section class="sec synergy">
+    <p class="en-label">Synergy</p>
+    <h2 class="sec-title">なぜ今回は<br><span class="nw">「過去いちばん</span><span class="nw">結果が出る」</span>のか</h2>
+
+    <div class="circles">
+      <div class="circle">
+        <span class="c-en">FASTING</span>
+        <span class="c-main">ファスティング</span>
+        <span class="c-sub">体をリセット</span>
+      </div>
+      <span class="op">×</span>
+      <div class="circle">
+        <span class="c-en">PILATES</span>
+        <span class="c-main">ピラティス</span>
+        <span class="c-sub">代謝を底上げ</span>
+      </div>
+      <span class="op">=</span>
+      <div class="circle result">
+        <span class="c-en">SYNERGY</span>
+        <span class="c-main">相乗効果</span>
+        <span class="c-sub">効率よく燃える</span>
+      </div>
+    </div>
+
+    <div class="synergy-note">
+      <p>ファスティングで体の中を一度リセットしながら、ピラティスの軽い運動で代謝を底上げ。<span class="mk-rose">「落とす」と「燃やす」を同時に行う</span>ことで、<span class="txt-rose">1日だけの断食でも効率よく結果を狙える</span>のが、今回のコラボ企画の最大のポイントです。</p>
+      <p style="margin-top:12px"><span class="mk">きつい運動は一切ありません。</span>ピラティスは初心者向けの内容なので、運動が苦手な方でも安心してご参加いただけます。</p>
+    </div>
+  </section>
+
+  <!-- ============ 1週間の流れ ============ -->
+  <section class="sec flow-sec">
+    <p class="en-label">Schedule</p>
+    <h2 class="sec-title">1週間の流れ</h2>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-day">8/28<br>金</div>
+        <div class="tl-body">
+          <h4>オープンチャットでサポート開始</h4>
+          <p>参加者みんなで励まし合いながら取り組みます。質問もいつでもOK。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day">断食<br>前日</div>
+        <div class="tl-body">
+          <h4>準備食の日</h4>
+          <p>参考メニューをお送りするので、その通りに食べるだけで断食の準備が整います。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day main">断食<br>当日</div>
+        <div class="tl-body">
+          <h4>ワンデイファスティング</h4>
+          <p>断食するのはこの1日だけ。みんなで一緒だから乗り切れます。</p>
+          <p style="margin-top:6px"><span class="mk">断食する日は、8月29日〜9月3日までで自由に選んでいただけます</span>（お申し込み後に希望日を伺います）。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day">断食<br>翌日</div>
+        <div class="tl-body">
+          <h4>回復食の日</h4>
+          <p>いちばん大事な回復食も、参考メニュー付きだから迷いません。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day">9/3<br>木</div>
+        <div class="tl-body">
+          <h4>1週間のゴール！</h4>
+          <p>成果をみんなでシェア。ここで終わりではなく、ピラティス動画はこの後もずっと使えます。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow-banner">
+      <p class="fb-label">COLLABORATION BONUS</p>
+      <p class="fb-main">期間中ずっと！小山ゆか.の<br>ピラティス指導【7日間】</p>
+      <p class="fb-sub">動画は<strong>企画終了後もずっと視聴OK</strong>。この7日間を毎週繰り返せば、ピラティスのオンライン講座に入ったのと同じ感覚で続けられます。</p>
+    </div>
+  </section>
+
+  <!-- ============ CTA 2 ============ -->
+  <div class="cta-block">
+    <p class="cta-head">8月28日、一緒にスタートしませんか？</p>
+    <a class="cta-btn" href="#" data-square>今すぐ申し込む<small>SQUARE SECURE CHECKOUT</small></a>
+  </div>
+
+  <!-- ============ 特典まとめ ============ -->
+  <section class="sec benefits">
+    <p class="en-label">All Included</p>
+    <h2 class="sec-title">参加すると受け取れるもの</h2>
+
+    <div class="benefit">
+      <div class="b-head"><span class="b-num">BENEFIT 01</span><span class="b-title">1週間のオープンチャットサポート</span></div>
+      <div class="b-body">ファスティングコーチ・ぬんが1週間しっかりサポート。仲間と一緒だから続きます。</div>
+    </div>
+    <div class="benefit">
+      <div class="b-head"><span class="b-num">BENEFIT 02</span><span class="b-title">準備食・回復食の参考メニュー</span></div>
+      <div class="b-body">断食の前後がいちばん大事。何を食べればいいか迷わないよう、そのまま真似できるメニューをお渡しします。</div>
+    </div>
+    <div class="benefit">
+      <div class="b-head"><span class="b-num">BENEFIT 03</span><span class="b-title">小山ゆか.のピラティス指導（7日間）</span></div>
+      <div class="b-body"><span class="mk-rose">通常グループでは行っていない、今回限定の企画（通常価格105,000円相当）</span>。初心者向けの内容で、代謝を底上げしてファスティングとの相乗効果を狙います。<span class="mk">動画は企画終了後もずっと視聴できる</span>ので、この7日間を毎週繰り返せば、オンライン講座に入ったのと同じ感覚で継続できます。</div>
+    </div>
+    <div class="benefit" style="border-color:var(--rose);border-width:2px">
+      <div class="b-head" style="background:var(--rose);"><span class="b-num" style="color:#fff">SPECIAL PRESENT</span><span class="b-title" style="color:#fff">丸1日分の食事添削（通常3,000円）</span></div>
+      <div class="b-body">普段は<strong>3,000円</strong>で実施している丸1日分の食事添削を、<span class="mk-rose">今回の参加者さま限定で無料プレゼント</span>。あなたの食事をぬんが直接添削します。</div>
+    </div>
+  </section>
+
+  <!-- ============ プロフィール ============ -->
+  <section class="sec profiles">
+    <p class="en-label">Instructors</p>
+    <h2 class="sec-title">あなたをサポートする2人</h2>
+
+    <div class="profile">
+      <div class="p-photo"><img src="../yuka.jpg" alt="小山ゆか." onerror="this.style.display='none'"></div>
+      <p class="p-role">PILATES INSTRUCTOR</p>
+      <p class="p-name">小山ゆか.</p>
+      <div class="p-bio">
+        <p>指導歴14年。経営者のパーソナルコーチとして台湾と福岡で活動。「分かりやすい」「楽しい」「声だけでも理解できる」と海外からもオファーが届く、<strong>運動嫌いの元歌手</strong>という異色の指導者。女性らしさを引き出すアプローチが得意で、<span class="mk">運動が苦手な方こそ安心して受けられるレッスンが人気</span>。</p>
+      </div>
+    </div>
+
+    <div class="profile">
+      <div class="p-photo"><img src="../nun.jpg" alt="ぬん" onerror="this.style.display='none'"></div>
+      <p class="p-role">FASTING COACH</p>
+      <p class="p-name">ぬん</p>
+      <div class="p-bio">
+        <p>ダイエットコーチ・ファスティング指導士。自身も1ヶ月半でマイナス5kg・ウエストマイナス7cmを達成。独自メソッドで講座生50人をダイエット成功に導く。「我慢しないダイエット」がモットーで、<span class="mk">外食も旅行もOKの続けられる指導が人気</span>。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 参加費 ============ -->
+  <section class="sec price-sec">
+    <p class="en-label">Price</p>
+    <h2 class="sec-title">参加費</h2>
+
+    <p style="text-align:center;font-size:14px;max-width:420px;margin:0 auto 20px">小山ゆか.のピラティス指導は、<span class="mk-rose">通常グループでは行っていない今回限定の企画</span>です。</p>
+
+    <div class="value-stack">
+      <div class="vs-row"><span>ファスティングドリンク＋Zoomイベント</span><span class="vs-price">39,000円</span></div>
+      <div class="vs-row"><span>小山ゆか.のピラティス指導（7日間）<br><small style="color:#8a8a8a">※通常価格</small></span><span class="vs-price">105,000円</span></div>
+      <div class="vs-total"><span>通常合計</span><span class="strike">144,000円</span></div>
+    </div>
+    <div class="vs-arrow">▼</div>
+
+    <div class="price-box">
+      <p class="price-label">コラボ開催 イベント価格</p>
+      <p class="price-num"><span class="yen">¥</span>35,000<span class="yen">（税込）</span></p>
+      <p style="font-size:14px;margin-top:10px">通常合計144,000円のところ、<br><span class="mk"><span class="txt-rose">109,000円おトク</span>になる、今回限りの価格</span>です。</p>
+      <p style="font-size:13px;margin-top:10px"><span class="mk-rose">さらに今回限定：丸1日分の食事添削（通常3,000円）を無料プレゼント</span></p>
+    </div>
+    <p class="deadline">募集期間：8月14日（金）体験会後〜8月17日（月）23:59</p>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec faq-sec">
+    <p class="en-label">Q&amp;A</p>
+    <h2 class="sec-title">よくあるご質問</h2>
+    <div class="faq">
+      <details>
+        <summary>ファスティングが初めてでも大丈夫ですか？</summary>
+        <div class="a">大丈夫です。断食は1日だけで、前後の準備食・回復食も参考メニュー付き。オープンチャットでいつでも質問できるので、初めての方こそ安心して取り組めます。</div>
+      </details>
+      <details>
+        <summary>断食する日は決まっていますか？</summary>
+        <div class="a">決まっていません。8月29日〜9月3日までで、ご自身の予定に合わせて自由に選んでいただけます。お申し込み後に希望日を伺います。</div>
+      </details>
+      <details>
+        <summary>仕事がある日でも参加できますか？</summary>
+        <div class="a">できます。ピラティスやオープンチャットは自分のペースで参加OK。断食当日も普段どおりお仕事をされている方がほとんどです。</div>
+      </details>
+      <details>
+        <summary>運動が苦手でもピラティスについていけますか？</summary>
+        <div class="a">初心者向けの内容なのでご安心ください。きつい運動ではなく、代謝を底上げするための軽い動きが中心です。</div>
+      </details>
+      <details>
+        <summary>何か用意するものはありますか？</summary>
+        <div class="a">特別な道具は必要ありません。詳細はお申し込み後にオープンチャットでご案内します。</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ 最終CTA ============ -->
+  <div class="cta-block" style="padding:64px 24px">
+    <p class="en-label">Join Us</p>
+    <p class="cta-head" style="font-size:22px">今年の夏は、<br>「痩せた記憶」にしませんか？</p>
+    <p style="font-size:14px;margin-bottom:24px">8月28日スタート。みんなで楽しく、<br>プロの指導のもとで効率よく結果を出す1週間です。</p>
+    <a class="cta-btn" href="#" data-square>今すぐ申し込む<small>SQUARE SECURE CHECKOUT</small></a>
+  </div>
+
+  <footer class="footer">
+    <p>ファスティング×ピラティス 一週間ダイエット企画</p>
+    <p style="margin-top:6px">&copy; 2026 nun × yuka koyama</p>
+  </footer>
+
+</div>
+
+<script>
+// ★★★ ままさぽ会員限定の決済リンク ★★★
+const SQUARE_URL = "https://square.link/u/YdjS5igM";
+document.querySelectorAll("[data-square]").forEach(function(a){
+  a.href = SQUARE_URL;
+});
+</script>
+</body>
+</html>
