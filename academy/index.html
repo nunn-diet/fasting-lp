@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1Dayファスティング オプチャ配信テンプレート</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@700;900&family=Montserrat:wght@600;700&display=swap">
+<style>
+:root{
+  --bg:#FBF7F3;
+  --card:#FFFFFF;
+  --ink:#3A3230;
+  --sub:#8A7D76;
+  --rose:#C96B62;
+  --rose-deep:#A85248;
+  --rose-pale:#F7E7E4;
+  --gold:#B99A5C;
+  --gold-pale:#F6EFE2;
+  --line:#EBDFD7;
+  --chip-ink:#A85248;
+  --shadow:0 2px 10px rgba(90,60,50,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#231C1A;
+    --card:#2C2422;
+    --ink:#EDE4DE;
+    --sub:#A99A92;
+    --rose:#E09189;
+    --rose-deep:#EBA79F;
+    --rose-pale:#3B2C29;
+    --gold:#CFB27A;
+    --gold-pale:#332B20;
+    --line:#3E332F;
+    --chip-ink:#EBA79F;
+    --shadow:0 2px 10px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#231C1A;
+  --card:#2C2422;
+  --ink:#EDE4DE;
+  --sub:#A99A92;
+  --rose:#E09189;
+  --rose-deep:#EBA79F;
+  --rose-pale:#3B2C29;
+  --gold:#CFB27A;
+  --gold-pale:#332B20;
+  --line:#3E332F;
+  --chip-ink:#EBA79F;
+  --shadow:0 2px 10px rgba(0,0,0,.3);
+}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Noto Sans JP',"Hiragino Sans",sans-serif;
+  line-height:1.9;
+  font-size:15px;
+  margin:0;
+}
+.wrap{max-width:680px;margin:0 auto;padding:40px 20px 80px}
+.eyebrow{
+  font-family:'Montserrat',sans-serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin:0 0 10px;
+}
+h1{
+  font-family:'Zen Old Mincho',serif;
+  font-size:clamp(24px,5.5vw,32px);
+  font-weight:900;
+  line-height:1.5;
+  margin:0 0 8px;
+  text-wrap:balance;
+}
+.lead{color:var(--sub);font-size:14px;margin:0 0 32px}
+h2{
+  font-family:'Zen Old Mincho',serif;
+  font-size:20px;
+  font-weight:700;
+  margin:48px 0 16px;
+  padding-bottom:8px;
+  border-bottom:2px solid var(--rose-pale);
+}
+.note{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px 20px;
+  box-shadow:var(--shadow);
+  font-size:14px;
+}
+.note ol,.note ul{margin:0;padding-left:20px}
+.note li{margin:4px 0}
+.tablebox{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:440px}
+th,td{padding:9px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{
+  font-family:'Montserrat','Noto Sans JP',sans-serif;
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--sub);
+  font-weight:700;
+}
+tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.phlist{font-size:13px;color:var(--sub);margin:14px 0 0}
+.ph{
+  color:var(--rose-deep);
+  background:var(--rose-pale);
+  border-radius:5px;
+  padding:0 4px;
+  font-weight:500;
+}
+.msg{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  margin:22px 0;
+  overflow:hidden;
+}
+.msg-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px 18px;
+  border-bottom:1px solid var(--line);
+}
+.num{
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  font-size:12.5px;
+  color:var(--rose);
+  background:var(--rose-pale);
+  border-radius:50%;
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.msg-head .tt{flex:1;min-width:0}
+.msg-head h3{
+  font-size:15px;
+  font-weight:700;
+  margin:0;
+  line-height:1.4;
+}
+.chip{
+  display:inline-block;
+  font-size:11.5px;
+  font-weight:700;
+  color:var(--chip-ink);
+  background:var(--rose-pale);
+  border-radius:999px;
+  padding:2px 10px;
+  margin-top:3px;
+  letter-spacing:.03em;
+}
+button.copy{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:12.5px;
+  font-weight:700;
+  color:var(--rose-deep);
+  background:transparent;
+  border:1.5px solid var(--rose);
+  border-radius:999px;
+  padding:7px 16px;
+  cursor:pointer;
+  flex-shrink:0;
+  transition:background .15s,color .15s;
+}
+button.copy:hover{background:var(--rose);color:#fff}
+button.copy:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+button.copy.done{background:var(--rose);color:#fff}
+.aim{
+  font-size:13px;
+  color:var(--ink);
+  background:var(--gold-pale);
+  margin:0;
+  padding:12px 18px;
+  border-bottom:1px solid var(--line);
+}
+.aim b{color:var(--gold)}
+pre.body{
+  font-family:'Noto Sans JP',"Hiragino Sans",sans-serif;
+  font-size:14.5px;
+  line-height:1.95;
+  white-space:pre-wrap;
+  word-break:break-word;
+  margin:0;
+  padding:20px 22px;
+}
+footer{
+  margin-top:56px;
+  text-align:center;
+  font-size:12px;
+  color:var(--sub);
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">Open Chat Template</p>
+  <h1>1Dayファスティング企画<br>オプチャ配信テンプレート</h1>
+  <p class="lead">実際の企画で使った参加者用オープンチャットの配信全21通を、1人で開催する1Dayファスティング企画用に整えたテンプレートです。各配信の「コピー」ボタンでそのまま貼れます。</p>
+
+  <h2>使い方</h2>
+  <div class="note">
+    <ol>
+      <li>〈　〉の穴埋め部分を自分の内容に書き換える</li>
+      <li>タイミングは「企画スタート日」基準の相対表記。自分のカレンダーに当てはめる</li>
+      <li>各配信の上にある「🎯この配信の狙い」は解説なので、配信文には含めない</li>
+      <li>断食は「準備食→断食→回復食」の3日間セット。スタート日は参加者が期間内で自由に選ぶ形</li>
+      <li>キックオフZoomは「スタート3日前の昼」、フィナーレZoomは「企画翌日の昼」を例にしています。自分の予定に合わせて変更OK</li>
+    </ol>
+    <p class="phlist">主な穴埋め: <span class="ph">〈あなたの名前〉</span> <span class="ph">〈企画名〉</span> <span class="ph">〈ZoomのURL〉</span> <span class="ph">〈アーカイブのURL〉</span> <span class="ph">〈マニュアルのURL〉</span> <span class="ph">〈ドリンクを送る場合〉</span></p>
+  </div>
+
+  <h2>配信スケジュール一覧</h2>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>#</th><th>タイミング</th><th>内容</th><th>目的</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>参加確定後すぐ</td><td>ウェルカム&amp;自己紹介のお願い</td><td>場の空気づくり・目標宣言</td></tr>
+        <tr><td>2</td><td>スタート7日前</td><td>全体スケジュール案内</td><td>期待醸成・不安解消</td></tr>
+        <tr><td>3</td><td>スタート6日前</td><td>キックオフZoom日程投票</td><td>参加率最大化</td></tr>
+        <tr><td>4</td><td>スタート4日前</td><td>Zoom日程決定＋顔出しのお願い</td><td>実務＋本気度UP</td></tr>
+        <tr><td>5</td><td>スタート3日前 朝</td><td>断食スタート日の投票＋Zoomリマインド</td><td>日程確定・脱落防止</td></tr>
+        <tr><td>6</td><td>スタート3日前 夕方</td><td>Zoomお礼＋アーカイブ</td><td>未参加者フォロー</td></tr>
+        <tr><td>7</td><td>スタート2日前</td><td>マニュアル配布＋準備物</td><td>実務案内</td></tr>
+        <tr><td>8</td><td>スタート前日 朝</td><td>ビフォー写真のお願い</td><td>成果の可視化準備</td></tr>
+        <tr><td>9</td><td>スタート前日 夜</td><td>アウトプットルール＋見本</td><td>投稿文化の設計</td></tr>
+        <tr><td>10</td><td>Day1 朝</td><td>スタート宣言</td><td>初日の熱量最大化</td></tr>
+        <tr><td>11</td><td>Day1 夜</td><td>夜アウトプットの手本</td><td>投稿文化づくり</td></tr>
+        <tr><td>12</td><td>Day2 朝</td><td>断食日の応援</td><td>断食組サポート</td></tr>
+        <tr><td>13</td><td>Day3 朝</td><td>変化シェア促し</td><td>社会的証明の生成</td></tr>
+        <tr><td>14</td><td>Day3 夜</td><td>読み物①「新しい選択」</td><td>情緒的つながり</td></tr>
+        <tr><td>15</td><td>Day4 朝</td><td>折り返し＋Q&amp;A＋フィナーレZoom投票</td><td>中だるみ防止</td></tr>
+        <tr><td>16</td><td>Day5 夜</td><td>読み物②「自信と余裕」</td><td>Why(なぜ痩せるのか)</td></tr>
+        <tr><td>17</td><td>Day6 朝</td><td>Zoom日程決定＋写真を撮ろう</td><td>成果の可視化</td></tr>
+        <tr><td>18</td><td>Day7 朝</td><td>最終日チャレンジ</td><td>有終の美</td></tr>
+        <tr><td>19</td><td>Day7 夜</td><td>お礼＋成果アウトプット大募集</td><td>口コミ生成</td></tr>
+        <tr><td>20</td><td>企画翌日 朝</td><td>フィナーレZoomリマインド</td><td>参加率最大化</td></tr>
+        <tr><td>21</td><td>企画翌日 午後</td><td>アーカイブ＋お礼＋今後の導線</td><td>余韻＋次の商品への布石</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>開始前フェーズ(9通)</h2>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">1</span><div class="tt"><h3>ウェルカム&amp;自己紹介のお願い</h3><span class="chip">参加確定後すぐ(できればノートに固定)</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 入室した瞬間に「目標を宣言する場所」だと分かる空気を作る。宣言した参加者は完走率が段違いに上がる。</p>
+    <pre class="body">こんにちは🕊️💗
+〈あなたの名前〉です🍒✨
+
+【〈企画名〉】への
+ご参加、本当にありがとうございます🥺💗
+
+＝＝＝＝＝＝＝
+
+🫧入室されたら、まず最初に
+
+① 呼ばれたいお名前
+(あだ名でもOK)
+
+② この企画で達成したい目標
+
+(例:2キロ痩せたい、
+お腹を引き締めたい、暴食をやめたい、
+ダイエット仲間と励まし合いたい💗)
+
+この2つを書いてください✍️💕
+
+＝＝＝＝＝＝＝
+
+人前で宣言するだけで
+目標達成率は本当に上がります🩰✨
+
+目標が明確な方が
+私もアドバイスしやすく、
+より結果の出やすい1週間になります❤️‍🔥
+
+──────────
+
+🫶🏻私からのお願い
+
+今回は"みんなで1週間、
+本気でキレイになる"企画なので
+
+ぜひ【積極的に✨】
+参加してもらえたら嬉しいです🕊💗
+
+／
+・一言でも投稿してくれる方
+・毎日のふり返りをシェアしてくれる方
+・他の参加者さんの投稿にリアクションする方
+＼
+
+こういう方は、例外なく
+加速度的にキレイになります🩰❤️‍🔥
+
+──────────
+
+通知が多いときは
+通知オフでも大丈夫です🫧
+
+【◯/◯(◯)スタート】に向けて、
+準備のご案内はここでお届けしますね💌🌸
+
+この1週間で一緒に
+綺麗になりましょう🩰🕊🤍
+
+あっ、これ読んでくださったら
+リアクションボタンで
+反応お願いします〜👆💕</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">1-2</span><div class="tt"><h3>続けて自分の見本を投稿</h3><span class="chip">1通目の直後</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 主催者が先に見本を出すと参加者が真似しやすくなる。ハードルの低い書き方をあえて見せる。</p>
+    <pre class="body">ということで私から🥰ˎˊ˗
+
+①名前:〈あなたの名前〉です💗
+
+〈呼ばれたいあだ名〉って
+呼んでもらえたら嬉しいです🥺💕
+
+②目標:体重−1キロ
+
+最近すっかり気が緩んでたので
+1キロ絞りたいです🔥
+
+あと寝る前のだらだらお菓子を
+やめたい…😤✨
+
+◯/◯からよろしくお願いします✊💕</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">2</span><div class="tt"><h3>「あと1週間!」＋全体スケジュール</h3><span class="chip">スタート7日前</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 全体像を見せて「ついていけるかな」の不安を消す。「全部できなくてOK」の先出しが脱落防止になる。</p>
+    <pre class="body">@All
+
+ついに【スタート1週間前】に
+なりました🥹💕!!
+
+自己紹介と目標宣言、
+ありがとうございます🍒✨
+(まだの方は今からでもぜひ📝💗)
+
+┈┈┈┈┈┈┈┈┈┈
+
+改めて、全体の流れをご案内します👇
+
+📅 ◯/◯(◯)〜◯/◯(◯)の7日間
+
+🍚 断食は【1日だけ】
+準備食→断食→回復食の
+3日間セットを、期間内の
+お好きなタイミングで行います
+(スタート日は後日アンケートで
+お伺いします📝)
+
+💬 このオプチャで毎日、
+朝の目標&夜のアウトプットを
+みんなでシェア
+
+🌸 最後はフィナーレZoomで
+打ち上げ🎉
+
+┈┈┈┈┈┈┈┈┈┈
+
+「ついていけるかな…」って
+不安な方、大丈夫です🙆‍♀️
+
+全部できなくてOK!
+自分のペースでOK!
+
+ここは頑張りを報告したら
+みんなが褒めてくれる場所です😍
+
+来週から一緒に
+頑張りましょう❤️‍🔥✨
+
+〈音声メッセージを録る場合:
+※音声でもご挨拶を録ったので、よかったら聞いてください🌸(2分です)
+〈音声のURL〉
+聞いてくださった方はリアクションお願いします👆🏻❤️〉</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">3</span><div class="tt"><h3>キックオフZoom日程投票</h3><span class="chip">スタート6日前</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 「決まった日程を通達」ではなく「投票で一緒に決める」形にすると参加率が大きく上がる。</p>
+    <pre class="body">@All
+
+こんにちは🥰💕
+
+スタート前に、みんなで
+【キックオフZoom】を行います❤️‍🔥
+
+・企画の進め方の説明
+・ワンデイファスティングのやり方
+・質問タイム
+
+を予定しています✨
+
+┈┈┈┈┈┈┈┈┈┈
+
+リアルタイムで参加してこそ
+意識が変わるので、
+ぜひ都合の合う日時に
+ご参加ください🥹💗
+
+[投票]参加できるところを
+【全て】選んでください👆
+
+⏰投票締切:明日のお昼12時
+
+参加できない方には
+アーカイブをお送りするので
+ご安心くださいね💌🌸</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">4</span><div class="tt"><h3>Zoom日程決定＋顔出しのお願い</h3><span class="chip">スタート4日前</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 顔出しのお願いは「本気度が上がるから」と理由をセットで。「すっぴんOK」の一言で心理ハードルを下げる。</p>
+    <pre class="body">@All
+
+みなさんこんにちは🫶🏻💗
+
+キックオフZoomですが…
+
+【◯/◯(◯)お昼12:00】が
+いちばん参加希望が多かったので、
+この時間に開催します〜!✨
+
+みんなに会えるの、
+本当に楽しみです🥰
+
+Zoomリンクはこちらです👇
+〈ZoomのURL〉
+
+┈┈┈┈┈┈┈┈┈┈
+
+今回の1週間、
+お互いの顔が見えていた方が
+応援し合えるし、
+ぐっと本気度も上がる❤️‍🔥
+
+なので、恥ずかしいかもしれませんが
+ぜひ顔出しで参加してもらえたら
+嬉しいです😍💕
+
+すっぴんでもぜんぜんOK!
+そのままで大丈夫です💓
+
+「背景が散らかってて…」という方は
+背景ぼかし機能が使えるので、
+やり方わからなければ
+すぐお伝えしますね🥹💕
+
+〈ドリンクを送る場合:
+＝＝＝＝＝＝＝＝
+
+本日、ドリンクを発送しました🥰🍷
+
+明日か明後日にお届け予定ですので、
+届いたらご確認お願いします💕〉
+
+＝＝＝＝＝＝＝＝
+
+それでは◯/◯(◯)、
+お昼12:00にお会いしましょう〜🧸🕊️✨</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">5</span><div class="tt"><h3>断食スタート日の投票＋Zoom当日リマインド</h3><span class="chip">スタート3日前・朝(キックオフZoom当日)</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 断食日を「自分で選んで宣言」させることで実行率を上げる。選び方のコツまで示して迷いを消す。</p>
+    <pre class="body">@All
+
+＼＼必ずご選択ください／／
+
+こんにちは🥰💕
+
+いよいよファスティングの日程を
+決めていただきます❤️!
+
+お忙しいところ恐縮ですが…
+本日中に必ずぽちっと
+ご選択ください👆🏻🌸
+
+＝＝＝＝＝＝＝＝
+
+今回は、この1週間の中で
+
+・1日目:準備食
+・2日目:本番(断食)
+・3日目:回復食
+
+という流れで、
+3日間セットで実践していただきます🍽️✨
+
+ーーーーーーーーーー
+📆 実施期間について
+ーーーーーーーーーー
+
+Day1〜Day5のあいだで、
+ご自身のご都合に合わせて
+「スタート日」を選んでいただけます!
+
+例えば…
+
+・Day1スタートの場合
+
+　Day1:準備食
+　Day2:本番(断食)
+　Day3:回復食
+
+こんなイメージになります👌💕
+
+選び方のコツ💡
+✅ 断食日は「大事な予定のない日」に
+✅ 外食の予定と重ねない
+✅ 生理予定日とはずらす
+
+[投票]スタート日をお選びください👆
+⏰締切:本日中
+
+＝＝＝＝＝＝＝＝
+
+このあと12時からは
+キックオフZoomです❤️‍🔥✨
+
+ファスティングの説明も行うので、
+「行けない予定だったけど行けるぞ!」
+って方もぜひ😍✨
+
+▼Zoomリンク
+〈ZoomのURL〉
+
+みなさんにお会いできるのを
+楽しみにしてます…🩷</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">6</span><div class="tt"><h3>Zoomお礼＋アーカイブ</h3><span class="chip">スタート3日前・夕方</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 参加者へのお礼と、来られなかった人のフォローを同時に。「◯分◯秒から」の指定で忙しい人も見てくれる。</p>
+    <pre class="body">@All
+
+1️⃣ファスティング開始日の投票、
+締切【本日中】です👀❤️
+ご回答よろしくお願いします💕
+
+2️⃣今日のキックオフZoomに
+ご参加くださった皆さん、
+ありがとうございました😍💕
+
+緊張されてた方も
+いらっしゃったと思いますが、
+みんなお顔見せてくださって😳💓!!
+
+嬉しすぎました😭🩷
+
+┈┈┈┈┈┈┈┈┈┈
+
+アーカイブはこちらです❤️
+⇣
+〈アーカイブのURL〉
+
+ワンデイファスティングの説明は
+◯分◯秒からになります📝✨
+
+お忙しい方も、
+そこだけはご確認お願いします❤️‍🔥✨</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">7</span><div class="tt"><h3>マニュアル配布＋準備物</h3><span class="chip">スタート2日前</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 実務連絡はチェックリスト形式で簡潔に。「なんでも聞いてください」で質問のハードルを下げておく。</p>
+    <pre class="body">@All
+
+こんばんは🥰💕
+
+こちら【マニュアル】になります📝✨
+必ずご確認ください😍
+
+〈マニュアルのURL〉
+
+┈┈┈┈┈┈┈┈┈┈
+
+そして準備物のご案内です👇
+
+✅ 500mlのペットボトルを
+最低4本ご用意ください🥰💕
+
+✅ お家に浄水が無い方は、
+3日間で飲むお水をすべて
+浄水にできるよう、
+必要な分だけご用意ください🥹❤️
+
+〈ドリンクを送る場合:
+✅ ドリンク、届いた方は
+冷蔵庫で保管してくださいね🍷〉
+
+┈┈┈┈┈┈┈┈┈┈
+
+分からないことがあれば
+このオプチャでも個別でも
+なんでも聞いてください💬😊
+
+スタートまであと2日です❤️‍🔥✨</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">8</span><div class="tt"><h3>ビフォー写真のお願い</h3><span class="chip">スタート前日・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> ビフォーアフターは満足度と口コミの源泉。「出さなくてOK・自分だけの記録で」と添えると撮ってくれる率が上がる。</p>
+    <pre class="body">@All
+
+おはようございます❤️✨
+
+スタート前の大事なお願いです👇
+
+【今の自分の写真】を
+撮っておいてください📸🌸
+
+・全身(できれば正面と横)
+・体重計の数字
+
+┈┈┈┈┈┈┈┈┈┈
+
+「自分の姿を客観視して驚きました😭」
+「特に後ろ姿が想像と違った…💭」
+
+毎回そういうお声がありますが、
+
+もーーーーー
+わかります。
+全力で頷けます😭❤️
+
+でも、
+まず現実を受け入れるのが
+スタートです🥹🌸
+
+そしてそのステップを踏めた方は、
+絶対先にも進めます👏🏻🩷
+
+ここでお腹を凹ませて
+撮りたくなると思いますが😂、
+1週間後・数ヶ月後の自分のために
+ありのままの姿を残してください🌸
+
+※写真はオプチャに出さなくてOK!
+自分だけの記録で大丈夫です🙆‍♀️</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">9</span><div class="tt"><h3>アウトプットルール＋見本</h3><span class="chip">スタート前日・夜</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 「毎朝目標・毎晩できたこと」のルールを前夜に設計しておく回。主催者が先に見本を出すのがコア。</p>
+    <pre class="body">@All
+
+いよいよ明日◯/◯(◯)から、
+〈企画名〉が
+スタートします🏃‍♂️‍➡️❤️‍🔥
+
+明日から1週間毎日、
+全員にして欲しいことがあります🙆‍♀️❤️
+
+毎朝⇨その日の目標🌸
+毎晩⇨その日できたこと🥰
+
+この2つを、ほんとうに
+一言でいいので、
+ここに投稿していきましょう🕊️✨
+
+例:
+目標⇨水を1.5リットル飲む!
+できたこと⇨水1.5リットル飲めた!
+よく噛んで食べられた!
+
+こんな感じで簡単で大丈夫です🙆‍♀️💗
+
+┈┈┈┈┈┈┈┈┈┈
+
+アウトプットすることで
+1週間の変化が本当に大きくなりますし、
+「言っちゃったしやるか😍」って
+なります!!
+
+アウトプットのパワーは凄いです❤️‍🔥✨
+
+あと時間に余裕がある時は、
+他の人の投稿に
+@を付けてコメントし合いましょう🥰💕
+やっぱり応援があると頑張れます🥹✨
+
+┈┈┈┈┈┈┈┈┈┈
+
+ということで今日は
+見本として私が投稿します📝💓
+
+⇣
+
+明日の目標:
+お水を1.5リットル飲む❤️‍🔥
+例えバタバタな1日でもやる❤️‍🔥!!
+
+(応援でも質問でも
+返信くれたら喜びます😍)</pre>
+  </article>
+
+  <h2>期間中フェーズ(12通)</h2>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">10</span><div class="tt"><h3>Day1・スタート宣言</h3><span class="chip">Day1・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 初日の熱量を最大化しつつ、やることを3つに絞って「簡単そう」と思わせる。完璧主義の芽をここで摘む。</p>
+    <pre class="body">@All
+
+おはようございます☀️
+
+ついに、ついに!
+【〈企画名〉】
+スタートです🎉🎉
+
+┈┈┈┈┈┈┈┈┈┈
+
+Day1の今日やることは
+この3つだけ👇
+
+✅ マニュアルをチェックする📝
+
+✅ お水をこまめに飲む💧
+(目安は1.5〜2L)
+
+✅ 夜、今日できたことを
+このオプチャに投稿する📝
+
+┈┈┈┈┈┈┈┈┈┈
+
+今日から準備食に入る方は
+「まごわやさしい」の和食で
+いきましょう🍚
+(マニュアルの参考メニュー通りでOK!)
+
+┈┈┈┈┈┈┈┈┈┈
+
+最初から完璧を
+目指さなくて大丈夫🙆‍♀️
+
+「1つでもできたら花マル」の
+1週間にしましょう🌸
+
+それでは、
+記念すべきDay1、
+一緒に楽しみましょ〜😍🔥
+
+＝＝＝＝＝＝＝＝
+
+今日の私の目標
+⇣
+🌸お水2L!
+🌸よく噛んでゆっくり食べる❤️‍🔥</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">11</span><div class="tt"><h3>夜アウトプットの手本</h3><span class="chip">Day1・夜</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 初日の夜が投稿文化の分かれ目。主催者が「小さなできた」を見本にして、投稿ハードルを最低まで下げる。</p>
+    <pre class="body">こんばんは🌙
+
+Day1、おつかれさまでした🥹💕
+
+さっそく私の
+今日のアウトプットです👇
+
+🌸お水2L
+→ 常温にしたら飲みやすい!
+
+🌸よく噛んでゆっくり食べる
+→ 満腹感が全然違ってびっくり😳
+
+┈┈┈┈┈┈┈┈┈┈
+
+こんな感じで、
+できたことを気軽に
+投稿してみてください📝✨
+
+「これしかできなかった」じゃなくて
+「これができた!」でOK🙆‍♀️
+
+どんな小さなことでも、
+投稿してくれたら
+全力で拍手します👏😍
+
+それでは今夜は
+ゆっくり休んでくださいね🌙💕</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">12</span><div class="tt"><h3>断食日の応援</h3><span class="chip">Day2・朝(断食に入る人が出始める日)</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 断食当日の過ごし方＋不調時の対処＋「つらければ中断OK」を必ずセットで。安全とと安心感が信頼につながる。</p>
+    <pre class="body">@All
+
+おはようございます☀️
+
+今日から断食に入る方も
+いらっしゃいますね🍚✨
+
+┈┈┈┈┈┈┈┈┈┈
+
+断食当日の過ごし方のコツ👇
+
+💧 ドリンクとお水を
+とにかく大袈裟なくらい
+ちびちびマメに飲む
+(血糖値が安定して、空腹感を
+そんなに感じません🙏🏻💓)
+
+🚶‍♀️ 激しい運動・長時間の外出は
+避けてのんびり過ごす
+
+😴 いつもより早めに寝る
+
+┈┈┈┈┈┈┈┈┈┈
+
+「頭痛っぽいな」「だるいな」と
+感じたら、水分と塩分をとって
+ゆっくり休んでください。
+
+つらい時は無理せず中断してOK🙆‍♀️
+それも大事な判断です。
+
+困ったらすぐ
+このオプチャで聞いてくださいね💬
+私がすぐ駆けつけます🏃‍♀️💨
+
+┈┈┈┈┈┈┈┈┈┈
+
+まだ断食日がこれからの方は、
+今日も水分補給を
+楽しんでいきましょ〜💧💕
+
+＝＝＝＝＝＝＝＝
+
+今日の私の目標
+⇣
+🌸ちびちび飲みを徹底!
+🌸よく噛んでゆっくり食べる!</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">13</span><div class="tt"><h3>変化シェア促し</h3><span class="chip">Day3・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 3日目は小さな変化が出始める頃。変化の「例」を先に見せると気づいてシェアしてくれる。参加者の声が次の社会的証明になる。</p>
+    <pre class="body">@All
+
+おはようございます☀️
+
+企画3日目!
+
+みなさんのアウトプット、
+全部読んでます🥹💗
+
+┈┈┈┈┈┈┈┈┈┈
+
+そろそろ、こんな変化を
+感じてる方いませんか?👇
+
+・朝、体が軽い気がする
+・お通じが良くなってきた
+・甘いものへの欲求が減ってきた
+・味覚が敏感になってきた
+・肌の調子がいい
+
+┈┈┈┈┈┈┈┈┈┈
+
+小さな変化に気づけた方は、
+ぜひオプチャでシェアして
+ください😍✨
+
+あなたの「ちょっとした変化」が、
+他の誰かの
+「私も頑張ろう」になります🤝💕
+
+数字(体重)の変化は
+まだ焦らなくて大丈夫🙆‍♀️
+
+体は確実に
+変わり始めていますよ🌸</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">14</span><div class="tt"><h3>読み物①「新しい選択」</h3><span class="chip">Day3・夜</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> マインド系の読み物が入ると「報告板」ではなく「あなたのコミュニティ」になる。挑戦エピソードは自分の実体験に差し替えるほど刺さる。</p>
+    <pre class="body">こんばんは🌙
+
+今日は少しだけ、
+私の話をさせてください🥹
+
+┈┈┈┈┈┈┈┈┈┈
+
+この3日間、みなさんの
+アウトプットを見ていて
+本当に感動しています。
+
+今まで水分補給を意識してこなかった方が
+「白湯を始めてみた☕️」と
+動き出してくれたり、
+
+食事なんて気にしたことなかった方が
+「よく噛んで食べてみた🥗」と
+報告してくれたり。
+
+これって全部、
+
+【今までの自分と違う選択】
+
+なんですよね🌱
+
+┈┈┈┈┈┈┈┈┈┈
+
+〈ここからは自分の挑戦エピソードに差し替え。
+「自分には絶対ムリと思っていたことを
+やってみたら、新しい景色が見えた」
+という体験談ならなんでもOK。例:〉
+
+実は私、昔から
+びっくりするくらいの
+〈苦手なこと〉です🥲
+
+そんな私が、
+【〈思い切って挑戦したこと〉】に
+挑戦しました😂笑
+
+正直、断ることもできました。
+
+でもやってみたら、
+
+「私には絶対ムリと思ってたけど、
+やれば少しはできるんだ😳」
+
+っていう、今までの自分では
+見えなかった景色が見えたんです。
+
+┈┈┈┈┈┈┈┈┈┈
+
+今までと同じことをしていたら、
+見える景色も結果も同じまま。
+
+でも「新しい選択」をした人にだけ、
+新しい景色が見えてきます🕊️✨
+
+みなさんはもう、
+この企画に参加するという
+新しい選択をした人です🌸
+
+残り4日、
+一緒に新しい景色を
+見にいきましょう❤️‍🔥
+
+おやすみなさい🌙💕</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">15</span><div class="tt"><h3>折り返し＋Q&amp;A＋フィナーレZoom投票</h3><span class="chip">Day4・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 中だるみする折り返し地点で「褒め」＋Q&amp;Aでテコ入れ。フィナーレZoomの投票もここで開始して最後まで引っ張る。</p>
+    <pre class="body">@All
+
+おはようございます☀️
+
+企画も今日で【折り返し】です🎉
+
+ここまで続けてきた自分を
+まず褒めてください👏😍
+
+┈┈┈┈┈┈┈┈┈┈
+
+よくある質問にお答えします💬
+
+Q. 空腹がつらい時は?
+
+A. 空腹は「波」です🌊
+ピークは15〜20分で引くので、
+白湯を飲む・歯を磨く・散歩するで
+やり過ごせます🙆‍♀️
+
+Q. 回復食、何に気をつける?
+
+A. 断食明けの1食目がいちばん大事!
+マニュアル通り、
+胃にやさしいものから🥣
+「せっかく断食したから」と
+いきなり食べるともったいないですよ
+
+Q. 体重があまり減りません…
+
+A. 大丈夫、数字は後から
+ついてきます🙆‍♀️
+体の中が変わっている最中なので、
+今は数字より
+体感の変化に目を向けてみてください🌸
+
+┈┈┈┈┈┈┈┈┈┈
+
+そして大事なお知らせ📢
+
+企画の締めくくりに
+【フィナーレZoom】を行います🌸
+
+この1週間の変化をシェアしながら、
+
+・このあとどうキープしていくか👗
+・むしろさらに痩せるには?👖
+
+をお話しする時間です😍
+
+[投票]参加できる日程を
+【全て】選んでください👆
+⏰締切:明日のお昼12時
+
+後半戦もいきましょ〜🔥</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">16</span><div class="tt"><h3>読み物②「自信と余裕」</h3><span class="chip">Day5・夜</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 「なぜ痩せるのか」のWhyを語る回。ダイエットを自己肯定感の話に接続すると、企画が「ただの断食」ではなくなる。エピソードは自分の体験に差し替えてOK。</p>
+    <pre class="body">こんばんは🌙
+
+今夜は「なぜ痩せたいのか」の
+話を少しだけ🥹
+
+┈┈┈┈┈┈┈┈┈┈
+
+〈ここからは「心の余裕がある素敵な人に
+出会った体験」を自分のエピソードに
+差し替えてもOK。例:〉
+
+前に家族で温泉に
+行ったときのことです♨️
+
+大浴場で、うちの子どもが
+大きな声で歌をうたいはじめまして…🎤
+
+隣にいたマダムに
+「騒がしくてすみません…」と
+謝ったら、
+
+「楽しいわ。ありがとう。」
+
+って笑ってくださったんです🥲
+
+┈┈┈┈┈┈┈┈┈┈
+
+私、この方みたいな
+大人の女性になりたいって
+心底思いました。
+
+こういう方って
+【気持ちの余裕】が
+あるんですよね。
+
+そしてその余裕って、
+
+【自分への自信・自分への満足】
+
+が満たされて初めて
+生まれるものだと思うんです。
+
+┈┈┈┈┈┈┈┈┈┈
+
+私がダイエットを始めた理由は
+「自信を持てる自分になりたい」
+でした。
+
+みなさんがこの1週間で
+積み重ねている小さな選択は、
+
+体重の数字以上に、
+「自分との約束を守れた」という
+自信になっていきます🌸
+
+その自信が、
+家族にも、まわりにも、
+やさしくできる余裕になる。
+
+だからこの企画は
+ただ痩せるだけの1週間じゃ
+ないんです🥹💗
+
+残り2日と少し、
+一緒に「自信」を
+積み重ねましょう✨
+
+おやすみなさい🌙💕</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">17</span><div class="tt"><h3>Zoom日程決定＋写真を撮ろう</h3><span class="chip">Day6・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> フィナーレZoomの心理ハードルを「10分だけOK・ランチしながらOK」で下げる。アフター写真の予告で最終日への期待を作る。</p>
+    <pre class="body">@All
+
+おはようございます☀️
+
+企画も残すところ
+【あと2日】です❤️‍🔥
+
+┈┈┈┈┈┈┈┈┈┈
+
+まず大事なお知らせ🎉
+
+🌸フィナーレZoomの日程決定🌸
+
+📅 ◯/◯(◯)12:00〜
+
+みんなでここまで頑張った振り返りと、
+これからにつながる
+大事な時間にします🫶🏻❤️
+
+・顔出しなしOK
+・10分だけの参加OK
+・ランチ食べながらOK
+
+ぜひリアルタイムで
+ご参加くださいね🥰✨
+
+┈┈┈┈┈┈┈┈┈┈
+
+そして今日のおすすめ行動👇
+
+📸【アフターの写真を撮る準備】
+
+スタート前に撮った写真、
+覚えてますか?🌸
+
+明日の最終日、同じ角度で
+撮り比べてみましょう!
+
+「数字はちょっとでも、
+見た目がスッキリした😳」
+
+っていう発見、
+本当によくあります✨
+
+┈┈┈┈┈┈┈┈┈┈
+
+ラスト2日、
+やり切りましょ〜🔥</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">18</span><div class="tt"><h3>最終日チャレンジ</h3><span class="chip">Day7・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 最終日を「消化試合」にせず、小さなチャレンジの日として演出。1週間を「新しい選択の連続」として意味づけし直す。</p>
+    <pre class="body">@All
+
+いよいよ【最終日】です🌸
+
+この1週間、
+
+・断食にチャレンジした
+・お水をちゃんと飲んだ
+・よく噛んで食べてみた
+・毎日アウトプットしてみた
+
+どれも
+「今までの自分とは違う選択」
+でしたよね🥹
+
+┈┈┈┈┈┈┈┈┈┈
+
+だから最後の今日は、
+
+【今までやらなかったことに
+チャレンジする日】
+
+にしてみてください❤️‍🔥
+
+・いつもよりゆっくり食べる
+・お菓子の代わりに温かいお茶
+・5分だけ多くストレッチ
+
+ほんの小さなことで大丈夫☺️
+
+┈┈┈┈┈┈┈┈┈┈
+
+そして明日◯/◯(◯)12:00〜は
+🌷フィナーレZoom🌷
+
+「行けないかも…」の方も
+✔ 飛び入り参加
+✔ 10分だけ参加
+大歓迎です🫶💗
+
+┈┈┈┈┈┈┈┈┈┈
+
+ラスト1日、
+自分をちょっと誇れる選択を
+しましょう😍❤️
+
+＝＝＝＝＝＝＝＝
+
+今日の私の目標
+⇣
+📸ビフォーアフターの写真を撮る!
+
+みんなも良かったら
+一緒に撮りましょう🥹💕
+(もちろん出さなくて大丈夫です🙆‍♀️)</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">19</span><div class="tt"><h3>お礼＋成果アウトプット大募集</h3><span class="chip">Day7・夜</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 熱が最高潮の最終夜に成果を言語化してもらう。ここで集まる声が次回募集の「お客様の声」資産になる。</p>
+    <pre class="body">@All
+
+〈企画名〉、
+最終日おつかれさまでした😭💗
+
+そして1週間、
+一緒に走ってくださって
+本当にありがとうございました🫶
+
+┈┈┈┈┈┈┈┈┈┈
+
+ぜひ今夜は、この1週間で
+
+【チャレンジできたこと】
+【変われたこと】
+
+をアウトプットして
+ください😍📝
+
+・数字の変化(体重・サイズ)
+・体感の変化(お通じ・肌・軽さ)
+・気持ちの変化
+
+どんなことでもOKです✨
+
+体重計の写真も
+「撮ったけど送ってない!」って方、
+今からでも大丈夫です📸
+
+┈┈┈┈┈┈┈┈┈┈
+
+子育てやお仕事で忙しい中、
+この企画に参加して、
+今までと違う選択をし続けたこと。
+
+それ自体が
+本当にすごいことです🌱💗
+
+この1週間は
+「ここで終わり」じゃなくて
+「ここから」のスタートです🌸
+
+┈┈┈┈┈┈┈┈┈┈
+
+明日◯/◯(◯)12:00〜の
+フィナーレZoomで
+お会いできるのを
+楽しみにしています☺️💕
+
+▼Zoomリンク
+〈ZoomのURL〉</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">20</span><div class="tt"><h3>フィナーレZoomリマインド</h3><span class="chip">企画翌日・朝(フィナーレZoom当日)</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 当日朝の軽いリマインド。「10分だけOK」をもう一度言うだけで参加率が変わる。</p>
+    <pre class="body">@All
+
+おはようございます🕊️✨
+
+改めて…
+1週間チャレンジ、
+本当におつかれさまでした🥹💗
+
+┈┈┈┈┈┈┈┈┈┈
+
+🌸本日12:00〜
+フィナーレZoom🌸
+
+・少しだけ顔出せるよ〜
+・10分だけならいけそう!
+
+そんな方も大大大歓迎です🥰
+
+心からお待ちしてます💕
+
+▼Zoomリンク
+〈ZoomのURL〉
+
+┈┈┈┈┈┈┈┈┈┈
+
+参加できない方には
+アーカイブもお届けするので
+ご安心ください🎥✨
+
+それでは12:00に
+お会いしましょ〜🌷💗</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">21</span><div class="tt"><h3>アーカイブ＋お礼＋今後の導線</h3><span class="chip">企画翌日・午後</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> フィナーレ直後は次の商品(個別サポート等)を案内する最高のタイミング。「1週間おつきあいいただいたみなさんだから」の限定感で売り込み感を消す。</p>
+    <pre class="body">@All
+
+🌸〈企画名〉
+フィナーレZoomアーカイブ🌸
+
+▼こちらから
+〈アーカイブのURL〉
+
+┈┈┈┈┈┈┈┈┈┈
+
+改めて、この企画に
+ご参加くださったみなさま、
+
+本当にありがとうございました🥹💗
+
+Zoomに来てくださった方も、
+「アーカイブ楽しみにしてます」と
+言ってくださった方も、
+
+その一言ひとことに
+心から励まされました💌
+
+┈┈┈┈┈┈┈┈┈┈
+
+みなさんのアウトプットを見て、
+
+✨やってよかった✨
+✨またやりたい✨
+
+と心から思える1週間でした🥹
+
+┈┈┈┈┈┈┈┈┈┈
+
+そして最後に
+大事なお話をひとつ🌸
+
+この1週間で感じた変化は
+「始まり」です。
+
+「この調子で本格的に
+変わりたい!」という方のために、
+
+【〈次の商品・個別サポートなど〉】の
+ご案内を近日中にお送りしますね😊
+
+(1週間おつきあいいただいた
+みなさんだから、のご案内です💕)
+
+┈┈┈┈┈┈┈┈┈┈
+
+まずは、1週間
+本当にありがとうございました💐
+
+これからも一緒に
+「きれい」を更新して
+いきましょう🌷✨
+
+〈あなたの名前〉</pre>
+  </article>
+
+  <h2>運用のコツ(配信文ではありません)</h2>
+  <div class="note">
+    <ul>
+      <li><b>参加者の投稿には必ずリアクション</b>: 名前を呼んで返信・スタンプ。「みんなが発言してくれる空気」はこれで作られる。継続率の生命線</li>
+      <li><b>自分も毎朝目標・毎晩できたことを投稿し続ける</b>: 「見本を見せ続ける」のが投稿文化のコア。朝の配信に「今日の私の目標」を毎回つける</li>
+      <li><b>参加者の言葉を拾って自分の行動に取り入れる</b>: 「◯◯さんの階段チャレンジを真似してみた」のような相互作用が場を温める</li>
+      <li><b>読み物(2本)は日程がきつければ1本に</b>: ただしゼロにしない。マインド系の読み物が入ると「報告板」ではなく「あなたのコミュニティ」になる</li>
+      <li><b>フィナーレ直後が次の案内の最高のタイミング</b>: 21通目の予告→数日後に個別サポート等の案内、の流れを設計しておく</li>
+      <li><b>災害・参加者の体調不良があった場合</b>: 朝の配信の冒頭で必ず一言触れる(気遣い→本題の順)</li>
+    </ul>
+  </div>
+
+  <footer>1Dayファスティング企画 オプチャ配信テンプレート</footer>
+</div>
+
+<script>
+document.querySelectorAll(".msg").forEach(function(card){
+  var btn = card.querySelector("button.copy");
+  var body = card.querySelector("pre.body");
+  btn.addEventListener("click", function(){
+    var text = body.textContent;
+    function done(){
+      btn.textContent = "コピーしました✓";
+      btn.classList.add("done");
+      setTimeout(function(){ btn.textContent = "コピー"; btn.classList.remove("done"); }, 1800);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); done(); } catch(e){}
+      document.body.removeChild(ta);
+    }
+  });
+});
+document.querySelectorAll("pre.body").forEach(function(pre){
+  pre.innerHTML = pre.innerHTML.replace(/〈[^〈〉]*〉/g, function(m){
+    return '<span class="ph">' + m + '</span>';
+  });
+});
+</script>
+
+</html>
