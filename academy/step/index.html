@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1Dayファスティング ステップ配信テンプレート</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@700;900&family=Montserrat:wght@600;700&display=swap">
+<style>
+:root{
+  --bg:#FBF7F3;
+  --card:#FFFFFF;
+  --ink:#3A3230;
+  --sub:#8A7D76;
+  --rose:#C96B62;
+  --rose-deep:#A85248;
+  --rose-pale:#F7E7E4;
+  --gold:#B99A5C;
+  --gold-pale:#F6EFE2;
+  --line:#EBDFD7;
+  --chip-ink:#A85248;
+  --shadow:0 2px 10px rgba(90,60,50,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#231C1A;
+    --card:#2C2422;
+    --ink:#EDE4DE;
+    --sub:#A99A92;
+    --rose:#E09189;
+    --rose-deep:#EBA79F;
+    --rose-pale:#3B2C29;
+    --gold:#CFB27A;
+    --gold-pale:#332B20;
+    --line:#3E332F;
+    --chip-ink:#EBA79F;
+    --shadow:0 2px 10px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#231C1A;
+  --card:#2C2422;
+  --ink:#EDE4DE;
+  --sub:#A99A92;
+  --rose:#E09189;
+  --rose-deep:#EBA79F;
+  --rose-pale:#3B2C29;
+  --gold:#CFB27A;
+  --gold-pale:#332B20;
+  --line:#3E332F;
+  --chip-ink:#EBA79F;
+  --shadow:0 2px 10px rgba(0,0,0,.3);
+}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Noto Sans JP',"Hiragino Sans",sans-serif;
+  line-height:1.9;
+  font-size:15px;
+  margin:0;
+}
+.wrap{max-width:680px;margin:0 auto;padding:40px 20px 80px}
+.eyebrow{
+  font-family:'Montserrat',sans-serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin:0 0 10px;
+}
+h1{
+  font-family:'Zen Old Mincho',serif;
+  font-size:clamp(24px,5.5vw,32px);
+  font-weight:900;
+  line-height:1.5;
+  margin:0 0 8px;
+  text-wrap:balance;
+}
+.lead{color:var(--sub);font-size:14px;margin:0 0 12px}
+.crosslink{font-size:13px;margin:0 0 32px}
+.crosslink a{color:var(--rose-deep);font-weight:700}
+h2{
+  font-family:'Zen Old Mincho',serif;
+  font-size:20px;
+  font-weight:700;
+  margin:48px 0 16px;
+  padding-bottom:8px;
+  border-bottom:2px solid var(--rose-pale);
+}
+.note{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px 20px;
+  box-shadow:var(--shadow);
+  font-size:14px;
+}
+.note ol,.note ul{margin:0;padding-left:20px}
+.note li{margin:4px 0}
+.tablebox{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:440px}
+th,td{padding:9px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{
+  font-family:'Montserrat','Noto Sans JP',sans-serif;
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--sub);
+  font-weight:700;
+}
+tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.phlist{font-size:13px;color:var(--sub);margin:14px 0 0}
+.ph{
+  color:var(--rose-deep);
+  background:var(--rose-pale);
+  border-radius:5px;
+  padding:0 4px;
+  font-weight:500;
+}
+.msg{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  margin:22px 0;
+  overflow:hidden;
+}
+.msg-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px 18px;
+  border-bottom:1px solid var(--line);
+}
+.num{
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  font-size:12.5px;
+  color:var(--rose);
+  background:var(--rose-pale);
+  border-radius:50%;
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.msg-head .tt{flex:1;min-width:0}
+.msg-head h3{
+  font-size:15px;
+  font-weight:700;
+  margin:0;
+  line-height:1.4;
+}
+.chip{
+  display:inline-block;
+  font-size:11.5px;
+  font-weight:700;
+  color:var(--chip-ink);
+  background:var(--rose-pale);
+  border-radius:999px;
+  padding:2px 10px;
+  margin-top:3px;
+  letter-spacing:.03em;
+}
+button.copy{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:12.5px;
+  font-weight:700;
+  color:var(--rose-deep);
+  background:transparent;
+  border:1.5px solid var(--rose);
+  border-radius:999px;
+  padding:7px 16px;
+  cursor:pointer;
+  flex-shrink:0;
+  transition:background .15s,color .15s;
+}
+button.copy:hover{background:var(--rose);color:#fff}
+button.copy:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+button.copy.done{background:var(--rose);color:#fff}
+.aim{
+  font-size:13px;
+  color:var(--ink);
+  background:var(--gold-pale);
+  margin:0;
+  padding:12px 18px;
+  border-bottom:1px solid var(--line);
+}
+.aim b{color:var(--gold)}
+pre.body{
+  font-family:'Noto Sans JP',"Hiragino Sans",sans-serif;
+  font-size:14.5px;
+  line-height:1.95;
+  white-space:pre-wrap;
+  word-break:break-word;
+  margin:0;
+  padding:20px 22px;
+}
+footer{
+  margin-top:56px;
+  text-align:center;
+  font-size:12px;
+  color:var(--sub);
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">Step Message Template</p>
+  <h1>1Dayファスティング<br>ステップ配信テンプレート</h1>
+  <p class="lead">参加者ひとりひとりに個別LINE(ステップ配信)で送る全7通のテンプレートです。準備食の3日前から回復食翌日まで、毎朝1通ずつ送ります。各配信の「コピー」ボタンでそのまま貼れます。</p>
+  <p class="crosslink">▶ オプチャ配信のテンプレートは<a href="../">こちら</a></p>
+
+  <h2>使い方</h2>
+  <div class="note">
+    <ol>
+      <li>〈　〉の穴埋め部分を自分の内容に書き換える</li>
+      <li>タイミングは「準備食の日」基準の相対表記。1Dayファスティングは「準備食1日→断食1日→回復食1日」の3日間セットです</li>
+      <li>各配信の上にある「🎯この配信の狙い」は解説なので、配信文には含めない</li>
+      <li>「{name}さん」はLINEステップ配信の名前差し込みタグです。使わない場合は削除するか、お名前に置き換えてください</li>
+      <li>動画を用意していない場合は、動画の案内ブロックごと削除してもマニュアルの案内に差し替えてもOK</li>
+    </ol>
+    <p class="phlist">主な穴埋め: <span class="ph">〈企画名〉</span> <span class="ph">〈動画のURL〉</span> <span class="ph">〈アンケートフォームのURL〉</span> <span class="ph">〈体重報告の最終日〉</span> <span class="ph">〈あなたの名前〉</span></p>
+  </div>
+
+  <h2>配信スケジュール一覧</h2>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>#</th><th>タイミング</th><th>内容</th><th>目的</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>準備食3日前</td><td>事前準備3点セット＋カフェイン減スタート</td><td>計測の徹底・不安解消</td></tr>
+        <tr><td>2</td><td>準備食2日前</td><td>準備食の食事内容(動画案内)</td><td>準備食の質を上げる</td></tr>
+        <tr><td>3</td><td>準備食前日</td><td>明日の食事の具体指示＋酵素の飲み方</td><td>準備食の実行率UP</td></tr>
+        <tr><td>4</td><td>準備食当日 朝</td><td>今日のOK/NG食材＋明日の本番手順</td><td>本番の成功準備</td></tr>
+        <tr><td>5</td><td>断食本番 朝</td><td>本番の過ごし方＋体に起こる変化の解説</td><td>完走サポート・離脱防止</td></tr>
+        <tr><td>6</td><td>回復食 朝</td><td>ねぎらい＋回復食の心得＋アフター計測</td><td>リバウンド防止</td></tr>
+        <tr><td>7</td><td>回復食翌日 朝</td><td>アンケート＋これからの食生活＋次の提案</td><td>感想回収・次の導線</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>ステップ配信 全7通</h2>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">1</span><div class="tt"><h3>事前準備3点セット</h3><span class="chip">準備食3日前</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> ビフォー記録(写真・サイズ・体重)を最初に固めておく回。ここを逃すと成果の証明ができなくなる。カフェインは3日かけて段階的に抜かせる。</p>
+    <pre class="body">こんにちは😍
+
+ファスティング準備食のスタートまで、
+あと3日となりました✨
+
+まずは今日から、
+コーヒーなどのカフェインを
+1日1杯までにして、
+
+明後日までに完全にゼロに
+していきましょう👏✨
+
+そして準備食が始まる前日までに、
+以下の3つをお願いします🙌🏻🩷
+
+＝＝＝＝
+
+【1】全身写真の撮影(必須)
+
+前から/横から/後ろから
+の3方向で、
+
+お腹を出した状態のお写真を
+必ず撮っておいてください✨
+
+よろしければ個別のこちらのLINEに
+お送りください📷
+(お顔は写さなくてOKです🥰)
+
+＝＝＝＝
+
+【2】サイズ測定
+
+・二の腕
+・ウエスト
+・太もも
+
+の3箇所をメジャーで測って、
+メモに残しておいてください📝✨
+
+＝＝＝＝
+
+【3】体重の記録(期間中は毎日)
+
+毎朝、起きたらまずお手洗いを済ませ、
+何か飲む前に体重計に乗りましょう✊🏻
+(毎回同じ服装or下着だと正確です💕)
+
+＝＝＝＝
+
+※お送りいただいた画像やデータは、
+お顔を隠した匿名の状態で
+発信や資料に使わせていただく場合があります🌸
+
+「匿名でも使わないでほしい」という方は、
+遠慮なく一言お知らせくださいね💌✨
+
+＝＝＝＝＝
+
+◾️今日からできる、ラクになる準備
+
+🌸お水を多めに飲む
+
+🌸お菓子・カフェインを控える
+
+🌸「まごはやさしいわ」を意識した食事
+
+🌸夜ふかしを減らす
+
+この4つを意識しておくと、
+準備食も断食も
+ぐっとラクになります☺️💡
+
+＝＝＝＝＝
+
+そして今日は、ファスティングの
+全体の流れがわかる動画を
+お届けします📽️
+
+「何から始めればいいの?」
+「私にもできるかな…?」
+
+という方にこそ見てほしい内容です🫶🏻
+
+【動画の内容】
+・ファスティング前の食事のポイント
+・ファスティング中に体で起こること
+・効果を高める3つのコツ
+・回復食がなぜ大事なのか
+・終わった後の生活の整え方
+
+※回復食の具体的な内容は
+マニュアルが最新なので、
+必ずマニュアルの方をご確認ください🌸
+
+▼動画はこちら
+〈動画のURL〉
+
+＝＝＝＝＝
+
+スタートは【3日後】です📆
+
+不安なことがあれば、
+いつでもこのLINEでご相談くださいね🩷
+
+一緒に体を整えていきましょう✨
+
+こちらの画像は保存して、
+いつでも見られるようにしておいてください🥰
+
+⬇️
+〈「まごはやさしいわ」の画像を添付〉</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">2</span><div class="tt"><h3>準備食の食事内容</h3><span class="chip">準備食2日前</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 「これ食べていい?」の迷いを前もって解消する回。準備食の重要性をここで刷り込むと本番のつらさが減る。</p>
+    <pre class="body">おはようございます🥰✨
+
+準備食のスタートまで、
+あと2日になりました🌸
+
+体の準備、
+少しずつ進んでいますか?🌿
+
+カフェインは今日も1杯までにして、
+明日からは完全にお休みしましょう✨
+
+┈┈┈┈┈┈┈┈┈┈
+
+今日は「準備食で実際に何を食べるか」が
+わかる動画をお届けします🍽️
+
+【動画の内容】
+① 準備食中に避けるもの
+② 特に気をつけたいのは〇〇と〇〇
+③ 甘いものが欲しくなった時の対処法
+④ 実際に食べるものの例
+
+┈┈┈┈┈┈┈┈┈┈
+
+「これって食べて大丈夫かな?」と
+迷ったら、まずこの動画で
+確認してみてくださいね🩷
+
+準備食は、ファスティングの効果を
+大きく左右するスタート地点です!
+
+ここを丁寧に過ごせると、
+本番が驚くほどラクになりますよ☺️✨
+
+※準備食は通常2日間ですが、
+今回は1Dayファスティングなので
+1日だけでOKです💕
+
+▼動画はこちら
+〈動画のURL〉</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">3</span><div class="tt"><h3>明日の食事の具体指示＋酵素の飲み方</h3><span class="chip">準備食前日</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 準備食当日の行動を「朝・昼・夜」まで具体的に指示して迷いをゼロに。酵素の飲み方動画は不調予防に直結するので必ず見てもらう。</p>
+    <pre class="body">いよいよ明日から
+準備食がスタートです☺️✨
+
+ファスティング本番に向けた
+"内臓の準備期間"になります🌿
+
+今日のうちに一食置き換えをする方は、
+
+／
+酵素ドリンク50mlを
+お水300mlで割って、
+
+1〜2時間かけてちびちびと
+ゆっくり飲んでみてください💕
+＼
+
+そして明日は、以下を守っていただくと
+本番がグッとラクになります🫶🏻
+必ず読んでおいてくださいね!
+
+ーーーーー
+
+【明日の朝にすること】
+
+・起きたら、常温のお水か白湯を
+コップ1杯(300mlほど)飲む
+
+・そのあとに、
+置き換えの酵素ドリンク50ml
+　or
+旬のフルーツ(りんご・みかんなど)を
+よーく噛んで食べる🍎✨
+
+ーーーーー
+
+【昼食・夕食のポイント】
+
+・「まごはや(“さ”は抜く)しいわ」の
+やさしい和食が理想です🍚
+
+・お肉、卵、揚げ物、
+パンやうどんなどの小麦、
+お菓子類は控えましょう💡
+
+・量は"いつもの6〜7割"。
+「ちょっと足りないかな?」で
+ストップできるとベストです☺️
+
+ーーーーー
+
+【今日から意識したいこと】
+
+・カフェインは完全にお休み☕️
+
+・夕食はできれば20時までに🍽️
+
+・体を冷やさず、
+ゆったり過ごしましょう🛁🧣
+
+ーーーーー
+
+【変化を実感するために】
+
+まだお写真を撮っていない方は、
+
+＼今日中に撮影をお願いします📸✨／
+
+・全身正面
+・横向き
+・背面
+
+の3方向です。
+あとで見比べたときの変化が
+とても分かりやすくなります☺️
+
+オプチャではなく、
+この個別LINEに送ってくださいね💌ˎˊ˗
+
+体重と、ウエスト・太ももなどの
+サイズ測定もお忘れなく✊🏻🩷
+
+ーーーーー
+
+◾️最後に、今日は絶対に見てほしい
+大事な動画をお届けします⚠️💡
+
+【酵素ドリンクの正しい飲み方】です🌸
+
+「そんなに大事なの?」と
+思うかもしれませんが、
+
+実は飲み方を間違えると、
+
+・頭痛やふらつき
+・強い空腹感
+
+につながってしまうんです…!
+
+逆に、動画のとおりに飲めば
+体も気持ちもグンとラクになります✊🏻✨
+
+本番前に必ずチェックしてくださいね🥰
+
+▼動画はこちら
+〈動画のURL〉</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">4</span><div class="tt"><h3>今日のOK/NG食材＋明日の本番手順</h3><span class="chip">準備食当日・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 準備食のOK/NGを具体的に示して迷いを消しつつ、明日の本番手順(酵素の作り方・飲み方)を前日に頭に入れてもらう。回復食動画もここで先出し。</p>
+    <pre class="body">{name}さん、おはようございます☺️💓
+
+今日は準備食の日ですね💓
+いよいよ明日がファスティング本番です✨
+
+昼食・夕食は
+「まごはや(さ)しいわ」を基本に、
+
+お肉・卵などの動物性たんぱく質、
+油っこいもの、砂糖などは
+控えてください🍽️✨
+
+量はいつもの6〜7割を目安に。
+「まだ少し食べられそうだけどな〜」
+くらいで止めておくと、
+断食中がとてもラクになりますよ💡😌
+
+＝＝＝＝＝＝＝＝＝＝＝
+
+ポイント☝️💡
+
+✖️パン・うどんなどの小麦は
+腸に負担がかかるので避けましょう☺️
+
+✖️ケーキ・和菓子などの糖質も
+今日はお休み🥺
+
+血糖値が不安定になると、
+断食1日目がしんどくなりやすいです⚠️
+
+◯魚やお肉のダシ
+
+そこまで神経質にならなくてOK。
+料理に動物性たんぱく質が入っていても、
+その具を避けて食べれば大丈夫です🙆
+
+◯お米などの炭水化物
+
+お米は食べてOKです
+(玄米ならなお良し)!
+お蕎麦も大丈夫(十割蕎麦がベスト)💐
+
+◎食物繊維と発酵食品
+
+食物繊維を意識すると
+ファスティング中のお通じが
+スムーズになります🙆‍♀️
+
+そして発酵食品は
+意識して食べてください😍
+
+お味噌、ぬか漬け、納豆などです。
+ヨーグルトは乳製品なので
+豆乳ヨーグルトを選べばOK◎
+
+「まごはやさしいわ」と合わせて、
+腸内環境を最高の状態に
+整えてくれます☺️
+
+＝＝＝＝＝＝＝
+
+ファスティング後の自分を想像して、
+良いイメージで楽しんで
+いきましょうね😌💕
+
+イメージした通りに、
+脳が細胞に働きかけてくれます🔥
+
+＝＝＝＝＝＝＝＝＝＝＝
+
+そして、
+明日の本番の流れです☝️💡
+
+明日は、朝起きたらまず
+常温のお水か白湯を300cc飲みます💓
+
+そのあと、酵素ドリンクを
+【1日かけて】飲んでいきます⚠️
+
+作り方:
+
+500mlのペットボトルのお水に
+酵素ドリンク75mlを入れて混ぜる
+(あふれないように、酵素の分だけ
+お水を減らしてくださいね)
+
+これを【4本】用意します💐✨
+
+飲み方:
+
+気がついたら【こまめに】
+ちびちび飲むのがコツです。
+
+15分に1回くらい飲むと
+空腹をほとんど感じません🌸
+
+逆に、丸1時間飲まない時間があると
+空きすぎのサインです⚠️
+
+飲む間隔が短いほど、
+ふらつきや頭痛が起こりにくくなります😌
+
+※朝起きてから寝る直前まで
+飲み続けたいので、
+序盤に飲みすぎないよう
+ペース配分にご注意を⚠️
+
+断食中は眠くなりやすいので、
+明日はできるだけ早めに
+休んでくださいね🥰
+
+＝＝＝＝＝＝＝＝＝＝
+
+最後に今日は、ファスティングで
+いちばん大切と言っても過言ではない
+「回復食」の動画をお届けします🌸
+
+ファスティング後の体は、
+吸収力がグンと高まっている状態。
+
+だからこそ
+「明けに何を食べるか」で
+この先の体質が変わります🥰💕
+
+回復食をおろそかにすると、
+体が「飢餓だった!溜め込もう!」と
+働いて、リバウンドしやすく
+なってしまうんです…。
+
+【いちばん重要なのは"回復食"】✊🏻✨
+
+本番前にぜひご覧くださいね🩷
+
+▼動画はこちら
+〈動画のURL〉</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">5</span><div class="tt"><h3>本番の過ごし方＋体に起こる変化の解説</h3><span class="chip">断食本番・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 本番当日の完全ガイド。安全上の注意(運転・頭痛・塩)は削らないこと。後半の「若返り」の解説は、空腹を"良いこと"に意味づけし直して離脱を防ぐ大事なパート。</p>
+    <pre class="body">おはようございます☺️✨
+
+本日はいよいよ、
+ファスティング本番です💐
+
+※朝起きてお手洗いに行った後の体重は、
+今日も引き続き送ってくださいね💕
+
+【今日のポイント】
+
+▷酵素ドリンクは
+《ちびちびと、1日かけて》
+飲みましょう✨
+
+500mlのペットボトルに
+酵素ドリンク75mlを入れる
+⇨これを4本作ります✊🏻
+(迷ったらマニュアルをご確認ください💕)
+
+▷激しい運動や長風呂は控えてください。
+めまいなどの原因になります⚠️
+
+▷自転車や車の運転は、
+体調の様子を見ながらにしましょう🚗
+
+▷個人差はありますが、断食中は
+頭痛・寒気・口内炎などの変化が
+出ることがあります⚠️
+その時はいつでもご連絡ください💌
+
+【今日の過ごし方】
+
+朝起きたら、お手洗い→体重測定のあと、
+白湯か常温のお水を300cc飲みます✨
+
+そのあとは、約4時間で1本のペースで
+酵素入りのペットボトルを
+飲んでいきます🌸
+
+低血糖を防ぐため、
+1時間以上は空けないように
+気をつけてくださいね🕊️
+
+外出するときは必ず
+【酵素ドリンクと、念のため天然塩】を
+持ち歩いてください💕
+
+もしつらい頭痛が出たら、
+天然塩をひと舐めしてみてください🥹
+
+ドリンクは朝から寝る直前まで
+飲み続けるので、ペース配分に注意⚠️
+
+※お水で割った酵素は、
+必ずその日のうちに飲み切りましょう🥰
+
+＝＝＝＝＝＝＝＝＝＝
+
+ノンカフェイン&無添加であれば、
+ハーブティーやルイボスティーも
+飲んでOKです🙆‍♀️
+(ハーブティーは香料が入っていないか
+チェックしてくださいね!)
+
+＝＝＝＝＝＝＝＝＝＝
+
+普段から味付けが濃いめの方、
+添加物やカフェインを多く
+とっている方は、
+頭痛が出やすい傾向があります😭
+その際は我慢せず、
+すぐご連絡ください💌!!
+
+＝＝＝＝＝＝＝＝＝＝
+
+ここからは、今日あなたの体の中で
+起こることをお話しします🩷📝
+
+【ファスティングが体に起こすこと】
+
+「食べないこと」で体の中では
+嬉しい変化=「若返り」が
+始まっています🥰🌸
+
+少し長いですが、頭の中で
+イメージすることが大事なので
+ぜひ最後まで読んでください✨
+
+断食中はもちろんお腹が空きます🍽️
+胃が動いてグーッと鳴ったり…
+
+実はこの「お腹が鳴る・空腹」こそが
+若返りの合図なんです💕
+
+普段の私たちは、食事のあと
+⬇️
+胃で分解して
+⬇️
+少しずつ腸へ送り
+⬇️
+栄養として吸収しています!
+
+栄養が流れてこないことに
+小腸が気づくと
+⬇️
+「モチリン」という消化ホルモンを出して
+⬇️
+胃を収縮させ、残っているかもしれない
+食べものを腸へ送ろうとします。
+
+このときにお腹が鳴ります✨
+
+でも断食中は、鳴っても食べないので、
+体は次の働きに進みます✊🏻🌸
+
+＝＝＝＝＝＝＝＝＝＝
+
+ここからが若返りのスタート!
+
+モチリンの次に
+⬇️
+食欲を出すホルモン「グレリン」が
+胃から脳に向けて出されます
+⬇️
+それでも固形物が入ってこないと、
+グレリンが成長ホルモン
+=若返りホルモンの分泌を促して、
+どんどん若返っていきます✨✨
+⬇️
+さらに、もう一つのスイッチも
+入ります💡
+
+＝＝＝＝＝＝＝＝＝＝
+
+それが「サーチュイン遺伝子」
+(別名: 長寿遺伝子)です!
+⬇️
+断食12時間以降から活性化して、
+体中の遺伝子をスキャンし、
+傷ついた細胞を修復してくれます🥰
+
+※遺伝子の傷は、老化などの
+原因になるといわれています。
+
+＝＝＝＝＝＝＝＝＝＝
+
+断食1日目は特に食べものの事を
+考えてしまいがちですが、
+
+「好きなお洋服を着たい」
+「朝スッキリ起きたい」
+
+という楽しいイメージを持つのも
+とても効果的です💐✨
+
+お水だけの苦しい断食と違って、
+ドリンクを飲みながらの
+ファスティングは楽しいものです🥰
+
+＜胃腸の休息＞と
+＜体の中の大掃除＞が
+同時に叶うので、
+
+「いいことをしているんだ!」と
+わくわくして過ごしてくださいね✨
+
+楽しいイメージを持つほど
+効果も高くなります!
+食べない非日常を楽しみましょう🥰💓
+
+＝＝＝＝＝＝＝＝＝＝
+
+最後の動画、
+「回復食のメニュー」をお届けします。
+
+▼動画はこちら
+〈動画のURL〉
+
+今日も何かあったら
+いつでもご連絡ください🩷</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">6</span><div class="tt"><h3>ねぎらい＋回復食の心得＋アフター計測</h3><span class="chip">回復食・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 断食明けの達成感があるうちにアフター記録を依頼。「溜め込みモード」の注意でリバウンドを防ぎ、最初の一口を特別な体験として演出する。</p>
+    <pre class="body">{name}さん、おはようございます🌸✨
+
+ワンデイファスティング、
+本当にお疲れさまでした👏🏻💕
+
+今日は回復食の日です🍽️✨
+
+◾️今日か明日のうちに、
+ファスティング後の全身写真を
+3方向から撮って、
+この個別LINEに送ってくださいね🥰
+＆
+サイズ測定もして
+メモしておいてください✍️💗
+
+◾️体重も〈体重報告の最終日〉まで、
+引き続き毎日お願いします💐
+
+＝＝＝＝＝＝＝＝＝＝
+
+今日の最初の一口は、
+素材の香りや甘み、温かさが…
+体にじんわり染み渡ると思います☺️🌿
+
+食べすぎず、よく噛んで、
+ゆっくり味わってくださいね。
+
+「ちょっと満たされたかな?」と
+感じたら、一旦ストップでOKです🫶🏻
+
+＝＝＝＝＝＝＝＝＝＝
+
+断食明けの体は
+「栄養を溜め込もう」と反応するので、
+空腹感が強く出る方も多いです⚠️
+
+ここでぐっとコントロールできると、
+このあとの体調に
+大きく差が出ます✊🏻✨
+
+今日1日は、ご自身の体と
+会話しながら、
+やさしく過ごしてあげてくださいね☺️
+
+ご連絡お待ちしています💌💗
+今日も素敵な1日になりますように🥰</pre>
+  </article>
+
+  <article class="msg">
+    <header class="msg-head"><span class="num">7</span><div class="tt"><h3>アンケート＋これからの食生活＋次の提案</h3><span class="chip">回復食翌日・朝</span></div><button class="copy">コピー</button></header>
+    <p class="aim"><b>🎯狙い:</b> 感想は熱があるうちに回収(この声が次回の実績になる)。「戻す」ではなく「続ける」の再教育と、3日間・5日間ファスティングへの自然な次の導線を作る。</p>
+    <pre class="body">おはようございます☺️🌸
+
+昨日で回復食も無事に終了です🌷
+3日間、本当にお疲れさまでした👏🏻✨
+
+体調はいかがですか🥰?
+
+＝＝＝＝＝＝＝＝
+
+今回のご感想を、
+気持ちが新しいうちに…♡
+こちらからご記入お願いします💌✨
+
+▼アンケートはこちら
+〈アンケートフォームのURL〉
+
+準備食から回復食まで
+丁寧にやり切った経験は、
+体にも心にも
+【大きな"財産"】になっています🫶🏻
+
+＝＝＝＝＝＝＝＝＝＝
+
+◾️ぜひこのタイミングで、
+
+・体の軽さ
+・肌の調子
+・お通じや眠りの質
+・気持ちの落ち着きや前向きさ
+
+など、ご自身の"変化"に
+目を向けてみてください☺️
+
+自分では気づきにくい変化ほど、
+実は大きかったりします♡
+
+＝＝＝＝＝＝＝＝＝＝
+
+◾️【これからの食生活】
+
+ここからは「元に戻す」ではなく
+⬇️
+「整った状態を続ける」が合言葉です✨
+
+▷動物性たんぱく質・カフェイン・
+アルコールは、少しずつ様子を見ながら
+
+▷発酵食品や食物繊維を積極的にとって、
+腸内環境をキープしましょう🍽️
+
+＝＝＝＝＝＝＝＝＝＝
+
+◾️【次のファスティングについて】
+
+今回の1Dayから1週間ほど空けると、
+3日間・5日間のファスティングが
+できるようになります✊ˎˊ˗
+
+脂肪燃焼は、完全に食事を抜いてから
+3日目に始まるので、
+脂肪を落とすのが目的なら
+5日間ファスティングがおすすめです☺️🩷
+
+＝＝＝＝＝＝＝＝＝＝
+
+できればここから3日間は、
+脂っこいものや刺激の強いものを避けて、
+和食中心のシンプルなメニューで
+体をやさしくサポートしましょう🍽️
+
+海藻や発酵食品は引き続きおすすめ🌱
+
+具だくさんのお味噌汁は、
+心もお腹も満たされますよ🩷
+
+外食の予定がある方は、
+
+▷できるだけ和食を選ぶ
+▷消化に良いものを選ぶ
+
+を意識してみてください✨
+
+◾️お肉・アルコール・カフェインは
+いつもの半分の量からスタートを⚠️
+
+体の吸収力が上がっているぶん、
+アルコールは回りやすくなっています🥺
+
+必ず同じ量のお水を一緒にとりながら、
+様子を見て飲んでくださいね💗
+
+⋰
+【〈企画名〉】へのご参加、
+本当にありがとうございました💕✨
+⋱
+
+これからも一緒に、
+キレイを更新していきましょう💄
+
+いつでもお気軽にご連絡ください💌💕
+
+〈あなたの名前〉より</pre>
+  </article>
+
+  <footer>1Dayファスティング ステップ配信テンプレート</footer>
+</div>
+
+<script>
+document.querySelectorAll(".msg").forEach(function(card){
+  var btn = card.querySelector("button.copy");
+  var body = card.querySelector("pre.body");
+  btn.addEventListener("click", function(){
+    var text = body.textContent;
+    function done(){
+      btn.textContent = "コピーしました✓";
+      btn.classList.add("done");
+      setTimeout(function(){ btn.textContent = "コピー"; btn.classList.remove("done"); }, 1800);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); done(); } catch(e){}
+      document.body.removeChild(ta);
+    }
+  });
+});
+document.querySelectorAll("pre.body").forEach(function(pre){
+  pre.innerHTML = pre.innerHTML.replace(/〈[^〈〉]*〉/g, function(m){
+    return '<span class="ph">' + m + '</span>';
+  });
+});
+</script>
+</html>
